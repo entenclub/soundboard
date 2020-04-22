@@ -20,7 +20,6 @@ class SoundBoard extends StatefulWidget {
 
 class SoundBoardState extends State<SoundBoard>
     with SingleTickerProviderStateMixin {
-  PageController _pageController;
   int _currentPage = 0;
 
   Future<void> popUpAlert(BuildContext context) {

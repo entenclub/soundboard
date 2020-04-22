@@ -490,7 +490,6 @@ class Soundboard extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 Row(
                   children: <Widget>[
                     SoundButton(text: '', path: '', type: ste)

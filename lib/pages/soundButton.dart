@@ -19,29 +19,7 @@ class SoundButton extends StatelessWidget {
 
   Future<void> onLongPress(BuildContext context) async {
     final ByteData bytes = await rootBundle.load('assets/sounds/$path');
-    return showDialog<void>(
-        context: context,
-        builder: (BuildContext context) {
-          return ListView(
-              shrinkWrap: true,
-              padding: const EdgeInsets.all(20.0),
-              children: <Widget>[
-                Center(
-                    child:
-                        AlertDialog(title: Text("Was nun?"), actions: <Widget>[
-                  FlatButton(
-                      onPressed: () => Navigator.of(context).pop(),
-                      child: Text("Abbrechen")),
-                  FlatButton(
-                      child: Text("Teilen"),
-                      onPressed: () async {
-                        await Share.file('slatt', '$path',
-                            bytes.buffer.asUint8List(), 'audio/mpeg');
-                        Navigator.of(context).pop();
-                      })
-                ]))
-              ]);
-        });
+    await Share.file('', '$path', bytes.buffer.asUint8List(), 'audio/mpeg');
   }
 
   SoundButton({this.text, this.path, this.type});
