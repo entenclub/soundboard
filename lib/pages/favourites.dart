@@ -6,25 +6,18 @@ import 'dart:io';
 class Favourites extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Home()
-        )
-      )
-    );
+    return MaterialApp(home: Scaffold(body: Center(child: Home())));
   }
 }
 
 class Home extends StatefulWidget {
   @override
-  State createState() =>  HomeState();
+  State createState() => HomeState();
 }
 
 class HomeState extends State<Home> {
-
-  TextEditingController keyInputController =  TextEditingController();
-  TextEditingController valueInputController =  TextEditingController();
+  TextEditingController keyInputController = TextEditingController();
+  TextEditingController valueInputController = TextEditingController();
 
   File jsonFile;
   Directory dir;
@@ -37,9 +30,11 @@ class HomeState extends State<Home> {
     super.initState();
     getApplicationDocumentsDirectory().then((Directory directory) {
       dir = directory;
-      jsonFile =  File(dir.path + "/" + fileName);
+      jsonFile = File(dir.path + "/" + fileName);
       fileExists = jsonFile.existsSync();
-      if (fileExists) this.setState(() => fileContent = json.decode(jsonFile.readAsStringSync()));
+      if (fileExists)
+        this.setState(
+            () => fileContent = json.decode(jsonFile.readAsStringSync()));
     });
   }
 
@@ -50,9 +45,10 @@ class HomeState extends State<Home> {
     super.dispose();
   }
 
-  void createFile(Map<String, dynamic> content, Directory dir, String fileName) {
+  void createFile(
+      Map<String, dynamic> content, Directory dir, String fileName) {
     // print("Creating file!");
-    File file =  File(dir.path + "/" + fileName);
+    File file = File(dir.path + "/" + fileName);
     file.createSync();
     fileExists = true;
     file.writeAsStringSync(json.encode(content));
@@ -63,7 +59,8 @@ class HomeState extends State<Home> {
     Map<String, dynamic> content = {key: value};
     if (fileExists) {
       // print("File exists");
-      Map<String, dynamic> jsonFileContent = json.decode(jsonFile.readAsStringSync());
+      Map<String, dynamic> jsonFileContent =
+          json.decode(jsonFile.readAsStringSync());
       jsonFileContent.addAll(content);
       jsonFile.writeAsStringSync(json.encode(jsonFileContent));
     } else {
@@ -79,28 +76,34 @@ class HomeState extends State<Home> {
     return Scaffold(
       body: ListView(
         children: <Widget>[
-          Padding(padding: EdgeInsets.all(10), 
-          child: Column(
-           children: <Widget>[
-           Padding(padding:  EdgeInsets.only(top: 10.0)),
-           Text("Dateininhalt: ", style:  TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
-           Text(fileContent.toString()),
-           Padding(padding:  EdgeInsets.only(top: 10.0)),
-           Text("Zur Speicherdatei hinzufügen: "),
-           TextField(
-            controller: keyInputController,
-
-          ),
-           TextField(
-            controller: valueInputController,
-          ),
-           Padding(padding:  EdgeInsets.only(top: 20.0)),
-           RaisedButton(
-            child:  Text("Add key, value pair", ),
-            color: Colors.black,
-            onPressed: () => writeToFile(keyInputController.text, valueInputController.text),
-          )
-              ]))],
+          Padding(
+              padding: EdgeInsets.all(10),
+              child: Column(children: <Widget>[
+                Padding(padding: EdgeInsets.only(top: 10.0)),
+                Text(
+                  "Dateininhalt: ",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+                Text(fileContent.toString()),
+                Padding(padding: EdgeInsets.only(top: 10.0)),
+                Text("Zur Speicherdatei hinzufügen: "),
+                TextField(
+                  controller: keyInputController,
+                ),
+                TextField(
+                  controller: valueInputController,
+                ),
+                Padding(padding: EdgeInsets.only(top: 20.0)),
+                RaisedButton(
+                  child: Text(
+                    "Add key, value pair",
+                  ),
+                  color: Colors.black,
+                  onPressed: () => writeToFile(
+                      keyInputController.text, valueInputController.text),
+                )
+              ]))
+        ],
       ),
     );
   }
@@ -143,4 +146,4 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       }).toList(),
     );
   }
-}*/ 
+}*/
