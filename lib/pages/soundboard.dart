@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'soundButton.dart';
 
 class Soundboard extends StatelessWidget {
-
+  // SOUNDS
   // monte
   final String aha = 'aha.mp3';
   final String bestSkin = 'bestskin.mp3';
@@ -95,6 +95,15 @@ class Soundboard extends StatelessWidget {
   final String noFront = "noFront.mp3";
   final String soNicht = "soNicht.mp3";
 
+
+  // VARS
+  final String ste = 'steel';
+  final String jus = 'justin';
+  final String ung = 'ungespielt';
+  final String sta = 'standartskill';
+  final String kno = 'knossi';
+  final String mon = 'monte';
+
   Widget build(BuildContext context) {
     
     return (
@@ -108,7 +117,7 @@ class Soundboard extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                   color: Colors.black,
+                   color: Color.fromRGBO(52, 73, 94, 1),
                     borderRadius:  BorderRadius.circular(7)),
                   child: 
                   Text(
@@ -121,150 +130,150 @@ class Soundboard extends StatelessWidget {
                 )),
                 Row(
                   children: <Widget>[
-                    SoundButton(text: 'Aha', path: aha, type: 'm'),
-                    SoundButton(text: 'Bester Skin', path: bestSkin, type: 'm'),
+                    SoundButton(text: 'Aha', path: aha, type: mon),
+                    SoundButton(text: 'Bester Skin', path: bestSkin, type: mon),
                     SoundButton(
-                        text: 'Booster knallt', path: boosterPops, type: 'm')
+                        text: 'Booster knallt', path: boosterPops, type: mon)
                   ],
                 ),
                 Row(
                   children: <Widget>[
                     SoundButton(
-                        text: 'Die Sonne lacht', path: sunsLaughing, type: 'm'),
+                        text: 'Die Sonne lacht', path: sunsLaughing, type: mon),
                     SoundButton(
                       text: 'Ehre genommen',
                       path: honorTaken,
-                      type: 'm',
+                      type: mon,
                     ),
                     SoundButton(
-                        text: 'Ich bin\'s Tim', path: iamTim, type: 'm'),
+                        text: 'Ich bin\'s Tim', path: iamTim, type: mon),
                   ],
                 ),
                 Row(
                   children: <Widget>[
-                    SoundButton(text: 'Jippie!', path: jippie, type: 'm'),
-                    SoundButton(text: 'Lache', path: laugh, type: 'm'),
-                    SoundButton(text: 'Manno!', path: manno, type: 'm'),
+                    SoundButton(text: 'Jippie!', path: jippie, type: mon),
+                    SoundButton(text: 'Lache', path: laugh, type: mon),
+                    SoundButton(text: 'Manno!', path: manno, type: mon),
                   ],
                 ),
                 Row(
                   children: <Widget>[
                     SoundButton(
-                        text: 'Mutter anrufen', path: momCall, type: 'm'),
-                    SoundButton(text: 'OMG', path: omg, type: 'm'),
+                        text: 'Mutter anrufen', path: momCall, type: mon),
+                    SoundButton(text: 'OMG', path: omg, type: mon),
                     SoundButton(
-                        text: 'OMG (Casino)', path: omgCasino, type: 'm'),
+                        text: 'OMG (Casino)', path: omgCasino, type: mon),
                   ],
                 ),
                 Row(
                   children: <Widget>[
-                    SoundButton(text: 'Rausgeholt', path: freshAir, type: 'm'),
+                    SoundButton(text: 'Rausgeholt', path: freshAir, type: mon),
                     SoundButton(
-                        text: 'Rein in die Olga', path: rido, type: 'm'),
+                        text: 'Rein in die Olga', path: rido, type: mon),
                     SoundButton(
                         text: 'Selbstständig',
                         path: autonomousExplaining,
-                        type: 'm')
+                        type: mon)
                   ],
                 ),
                 Row(
                   children: <Widget>[
-                    SoundButton(text: 'Thaddäus', path: spongebob, type: 'm'),
-                    SoundButton(text: 'Stößchen', path: cheers, type: 'm'),
+                    SoundButton(text: 'Thaddäus', path: spongebob, type: mon),
+                    SoundButton(text: 'Stößchen', path: cheers, type: mon),
                     SoundButton(
                         text: 'Creator Code',
                         path: creatorCode,
-                        type: 'm'),
+                        type: mon),
                   ],
                 ),
                 Row(
                   children: <Widget>[
                     SoundButton(
-                        text: 'Frauen-Realtalk', path: iq300, type: 'm'),
-                    SoundButton(text: 'Moin Moin', path: moinmoin, type: 'm'),
-                    SoundButton(text: 'Bam Bam', path: bambam, type: 'm'),
+                        text: 'Frauen-Realtalk', path: iq300, type: mon),
+                    SoundButton(text: 'Moin Moin', path: moinmoin, type: mon),
+                    SoundButton(text: 'Bam Bam', path: bambam, type: mon),
                   ],
                 ),
                 Row(
                   children: <Widget>[
-                    SoundButton(text: 'Dinkel', path: dinkel, type: 'm'),
-                    SoundButton(text: 'Fische', path: fish, type: 'm'),
-                    SoundButton(text: 'Augen', path: ikue, type: 'm'),
+                    SoundButton(text: 'Dinkel', path: dinkel, type: mon),
+                    SoundButton(text: 'Fische', path: fish, type: mon),
+                    SoundButton(text: 'Augen', path: ikue, type: mon),
                   ],
                 ),
                 Row(
                   children: <Widget>[
-                    SoundButton(text: 'Kanacke', path: kanacke, type: 'm'),
+                    SoundButton(text: 'Kanacke', path: kanacke, type: mon),
                     SoundButton(
-                        text: 'Käsebrötchen', path: cheese, type: 'm'),
+                        text: 'Käsebrötchen', path: cheese, type: mon),
                     SoundButton(
-                        text: 'Man kennt ihn', path: uknowhim, type: 'm'),
+                        text: 'Man kennt ihn', path: uknowhim, type: mon),
                   ],
                 ),
                 Row(
                   children: <Widget>[
-                    SoundButton(text: 'Mehmet', path: mehmet, type: 'm'),
-                    SoundButton(text: 'Messi', path: gotMessi, type: 'm'),
+                    SoundButton(text: 'Mehmet', path: mehmet, type: mon),
+                    SoundButton(text: 'Messi', path: gotMessi, type: mon),
                     SoundButton(
-                        text: 'Nasenbluten', path: nosebleed, type: 'm'),
+                        text: 'Nasenbluten', path: nosebleed, type: mon),
                   ],
                 ),
                 Row(
                   children: <Widget>[
                     SoundButton(
-                        text: 'Oben inna Süd', path: obenInnaSued, type: 'm'),
+                        text: 'Oben inna Süd', path: obenInnaSued, type: mon),
                     SoundButton(
-                        text: 'Rambazamba', path: rambazamba, type: 'm'),
+                        text: 'Rambazamba', path: rambazamba, type: mon),
                     SoundButton(
                       text: 'Verpiss dich!',
                       path: fuckOff,
-                      type: 'm',
+                      type: mon,
                     )
                   ],
                 ),
                 Row(
                   children: <Widget>[
                     SoundButton(
-                        text: 'On the Road', path: onTheRoad, type: 'm'),
+                        text: 'On the Road', path: onTheRoad, type: mon),
                     SoundButton(
                       text: 'Erster Sieg',
                       path: firstWin,
-                      type: 'm',  
+                      type: mon,  
                     ), 
-                    SoundButton(text: 'Verliebt', path: verliebt, type: 'm',)
+                    SoundButton(text: 'Verliebt', path: verliebt, type: mon,)
                   ],
                 ),
                 Row(
                   children: <Widget>[
-                    SoundButton(text: 'Say My Name', path: sayMyName, type: 'm',),
-                    SoundButton(text: 'Wer bist du denn?', path: werBistDuDenn, type: 'm'),
-                    SoundButton(text: 'Man muss nicht ...', path: manMussNichtAlles, type: 'm'),
+                    SoundButton(text: 'Say My Name', path: sayMyName, type: mon,),
+                    SoundButton(text: 'Wer bist du denn?', path: werBistDuDenn, type: mon),
+                    SoundButton(text: 'Man muss nicht ...', path: manMussNichtAlles, type: mon),
                   ],
                 ),
                 Row(
                   children: <Widget>[
-                    SoundButton(text: 'Heeyyy!', path: hey, type: 'm',),
-                    SoundButton(text: 'Kommisar', path: kommisar, type: 'm'),
-                    SoundButton(text: 'Ne', path: ne, type: 'm')
+                    SoundButton(text: 'Heeyyy!', path: hey, type: mon,),
+                    SoundButton(text: 'Kommisar', path: kommisar, type: mon),
+                    SoundButton(text: 'Ne', path: ne, type: mon)
                   ],
                 ),
                 Row(
                   children: <Widget>[
-                    SoundButton(text: 'Hmm...', path: hmm, type: 'm',),
-                    SoundButton(text: 'Das geht klar', path: dasGehtKlar, type: 'm'),
-                    SoundButton(text: 'Lambo', path: lambo, type: 'm',)
+                    SoundButton(text: 'Hmm...', path: hmm, type: mon,),
+                    SoundButton(text: 'Das geht klar', path: dasGehtKlar, type: mon),
+                    SoundButton(text: 'Lambo', path: lambo, type: mon,)
                   ],
                 ),
                 Row(children: <Widget>[
-                  SoundButton(text: 'Wichtiger als \'ne Rolex', path: wichtigerAlsNeRolex, type: 'm',),
-                  SoundButton(text: 'Nächste Schritt', path: derNaechsteSchritt, type: 'm'),
-                  SoundButton(text: '24 Minuten Realtalk', path: minuten24, type: 'm',)
+                  SoundButton(text: 'Wichtiger als \'ne Rolex', path: wichtigerAlsNeRolex, type: mon,),
+                  SoundButton(text: 'Nächste Schritt', path: derNaechsteSchritt, type: mon),
+                  SoundButton(text: '24 Minuten Realtalk', path: minuten24, type: mon,)
                 ]),
                 Row(
                   children: <Widget>[
-                    SoundButton(text: 'Schlafrhythmus', path: schlafrhythmus, type: 'm'),
-                    SoundButton(text: 'Absoluter Realtalk', path: realtalk, type: 'm'),
-                    SoundButton(text: 'Kommt auch mal was anderes?', path: kommtAuchMalWasAnderes ,type: 'm' )
+                    SoundButton(text: 'Schlafrhythmus', path: schlafrhythmus, type: mon),
+                    SoundButton(text: 'Absoluter Realtalk', path: realtalk, type: mon),
+                    SoundButton(text: 'Kommt auch mal was anderes?', path: kommtAuchMalWasAnderes ,type: mon )
                   ],
                 ),
 
@@ -284,30 +293,30 @@ class Soundboard extends StatelessWidget {
                 ),
                 Row(
                   children: <Widget>[
-                    SoundButton(text: 'RTL', path: rtl, type: 'k'),
+                    SoundButton(text: 'RTL', path: rtl, type: kno),
                     SoundButton(
                       text: 'Jasmin',
                       path: jasmin,
-                      type: 'k',
+                      type: kno,
                     ),
                     SoundButton(
                       text: 'Auf 50€',
                       path: auf50euro,
-                      type: 'k',
+                      type: kno,
                     ),
                   ],
                 ),
                 Row(
                   children: <Widget>[
-                   SoundButton(text: 'Gönn!', path: goenn, type: 'k'),
-                    SoundButton(text: 'Türk. Gesang', path: tuerkGes, type: 'k'),
-                    SoundButton(text: 'Albino Türke', path: albinoTuerke, type: 'k')
+                   SoundButton(text: 'Gönn!', path: goenn, type: kno),
+                    SoundButton(text: 'Türk. Gesang', path: tuerkGes, type: kno),
+                    SoundButton(text: 'Albino Türke', path: albinoTuerke, type: kno)
                   ]),
 
                 Row(children: <Widget>[
-                  SoundButton(text: 'Scheiße', path: scheisse, type: 'k',),
-                  SoundButton(text: 'Alge', path: alge, type: 'k'),
-                  SoundButton(text: 'Freudesschrei', path: freudesschrei, type: 'k')
+                  SoundButton(text: 'Scheiße', path: scheisse, type: kno,),
+                  SoundButton(text: 'Alge', path: alge, type: kno),
+                  SoundButton(text: 'Freudesschrei', path: freudesschrei, type: kno)
                 ]),
                  
                  Padding(
@@ -324,12 +333,12 @@ class Soundboard extends StatelessWidget {
 
                 Row(
                   children: <Widget>[
-                    SoundButton(text: 'Dichter Nebel', path: dichterNebel, type: 's'),
-                    SoundButton(text: 'Siegesmusik', path: epischerSieg, type: 's'),
-                    SoundButton(text: 'Paulberger', path: paulBerger, type: 's')
+                    SoundButton(text: 'Dichter Nebel', path: dichterNebel, type: sta),
+                    SoundButton(text: 'Siegesmusik', path: epischerSieg, type: sta),
+                    SoundButton(text: 'Paulberger', path: paulBerger, type: sta)
                   ]),
 
-                Row(children: <Widget>[SoundButton(text: 'Nebelix', path: nebelix, type: 's')]),
+                Row(children: <Widget>[SoundButton(text: 'Nebelix', path: nebelix, type: sta)]),
 
                 Padding(padding: EdgeInsets.only(top: 15),
                 child: Container(
@@ -340,44 +349,58 @@ class Soundboard extends StatelessWidget {
                   child: Text('Ungespielt', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white))),
                 ),
                 Row(children: <Widget>[
-                  SoundButton(text: 'Tiger wiegt \'ne Tonne', path: tigerTonne, type: 'u'),
-                  SoundButton(text: 'Pati Patu', path: patiPatu, type: 'u'),
-                  SoundButton(text: 'Milch ist Gift', path: milchIstGift, type: 'u')
+                  SoundButton(text: 'Tiger wiegt \'ne Tonne', path: tigerTonne, type: ung),
+                  SoundButton(text: 'Pati Patu', path: patiPatu, type: ung),
+                  SoundButton(text: 'Milch ist Gift', path: milchIstGift, type: ung)
                 ]),
               
               Padding(padding: EdgeInsets.only(top: 15), child:
               Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                color: Colors.lightBlue,
+                color: Colors.pinkAccent,
                 borderRadius:  BorderRadius.circular(7)), 
                 child: Text('Justin', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white)))),
               
               Row(children: <Widget>[
-                SoundButton(text: 'Sieht man das', path: siehtManDas, type: 'j'),
-                SoundButton(text: 'Tägliche Boss', path: derTaeglicheBoss, type: 'j'),
-                SoundButton(text: 'Lego-Boss', path: derLegoBoss, type: 'j')
+                SoundButton(text: 'Sieht man das', path: siehtManDas, type: jus),
+                SoundButton(text: 'Tägliche Boss', path: derTaeglicheBoss, type: jus),
+                SoundButton(text: 'Lego-Boss', path: derLegoBoss, type: jus)
               ]),
               
               Row(children: <Widget>[
-                SoundButton(text: 'Allergische Boss', path: derAllergischeBoss, type: 'j'),
-                SoundButton(text: 'Reaktions-Boss', path: derReaktionsBoss, type: 'j'),
-                SoundButton(text: 'Eisboss', path: derEisBoss, type: 'j')
+                SoundButton(text: 'Allergische Boss', path: derAllergischeBoss, type: jus),
+                SoundButton(text: 'Reaktions-Boss', path: derReaktionsBoss, type: jus),
+                SoundButton(text: 'Eisboss', path: derEisBoss, type: jus)
               ]),
               
               Row(children: <Widget>[
-                SoundButton(text: 'Relevante Fashionboss', path: derRelevanteFashionBoss, type: 'j'),
-                SoundButton(text: 'Konsequente Boss', path: derKonsequenteBoss, type: 'j'),
-                SoundButton(text: 'Finanzboss', path: derFinanzBoss, type: 'j'),
+                SoundButton(text: 'Relevante Fashionboss', path: derRelevanteFashionBoss, type: jus),
+                SoundButton(text: 'Konsequente Boss', path: derKonsequenteBoss, type: jus),
+                SoundButton(text: 'Finanzboss', path: derFinanzBoss, type: jus),
               ]),
               
               Row(children: <Widget>[
-                SoundButton(text: 'Lache', path: justinLache, type: 'j'),
-                SoundButton(text: 'Zehner', path: zehner, type: 'j'),
-                SoundButton(text: 'No Front', path: noFront, type: 'j')
+                SoundButton(text: 'Lache', path: justinLache, type: jus),
+                SoundButton(text: 'Zehner', path: zehner, type: jus),
+                SoundButton(text: 'No Front', path: noFront, type: jus)
               ]),
 
               Row(children: <Widget>[
-                SoundButton(text: 'So Nicht', path: soNicht, type: 'j')
-              ],)
-])))]));}} 
+                SoundButton(text: 'So Nicht', path: soNicht, type: jus)
+              ]),
+                // Steel
+                // 452, 1010, 1140
+                Padding(padding: EdgeInsets.only(top: 15), child:
+                Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius:  BorderRadius.circular(7)),
+                    child: Text('Steel', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white)))),
+
+                Row(children: <Widget>[
+                  SoundButton(text: '', path: '', type: ste)
+                ],),
+              ],
+            )))]));}}

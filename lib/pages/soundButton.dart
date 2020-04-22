@@ -40,20 +40,23 @@ class SoundButton extends StatelessWidget {
 
     var c;
     switch(this.type) {
-      case 'm':
+      case 'monte':
         c = Color.fromRGBO(52, 73, 94, 1);
         break;
-      case 'k':
+      case 'knossi':
         c = Color.fromRGBO(255, 215, 0, 1);
         break;
-      case 's':
-       c = Color.fromRGBO(39, 174, 96, 1);
+      case 'standartskill':
+       c = Colors.green;
         break;
-      case 'u':
-        c = Color.fromRGBO(230, 126, 34, 1);
+      case 'ungespielt':
+        c = Colors.orange;
         break;
-      case 'j':
-        c = Color.fromRGBO(0, 168, 255, 1);      
+      case 'justin':
+        c = Colors.pinkAccent;
+        break;
+      case 'steel':
+        c = Colors.blue;
         break;
       default:
         c = Color.fromRGBO(52, 73, 94, 1);
