@@ -291,7 +291,7 @@ class Soundboard extends StatelessWidget {
                     type: mon,
                   ),
                   SoundButton(
-                      text: 'Nächste Schritt',
+                      text: 'Nächster Schritt',
                       path: derNaechsteSchritt,
                       type: mon),
                   SoundButton(

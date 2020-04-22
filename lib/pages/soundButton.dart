@@ -13,8 +13,6 @@ class SoundButton extends StatelessWidget {
   void onClick() {
     AudioCache player = AudioCache();
     player.play("sounds/$path");
-    pressCount += 1;
-    print(pressCount);
   }
 
   Future<void> onLongPress(BuildContext context) async {
@@ -49,22 +47,27 @@ class SoundButton extends StatelessWidget {
     }
 
     return Expanded(
-        child: Padding(
-            padding: EdgeInsets.all(10),
-            child: RaisedButton(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5),
+      child: Padding(
+        padding: EdgeInsets.all(10),
+        child: RaisedButton(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(5),
+            ),
+            child: Padding(
+              padding: EdgeInsets.only(top: 20, bottom: 20),
+              child: Text(
+                this.text,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
                 ),
-                child: Padding(
-                    padding: EdgeInsets.only(top: 20, bottom: 20),
-                    child: Text(this.text,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                        ))),
-                onPressed: this.onClick,
-                onLongPress: () => this.onLongPress(context),
-                color: c)));
+              ),
+            ),
+            onPressed: this.onClick,
+            onLongPress: () => this.onLongPress(context),
+            color: c),
+      ),
+    );
   }
 }
