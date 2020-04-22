@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'soundButton.dart';
 
 class Soundboard extends StatelessWidget {
-  // SOUNDS
+
   // monte
   final String aha = 'aha.mp3';
   final String bestSkin = 'bestskin.mp3';
@@ -96,7 +96,7 @@ class Soundboard extends StatelessWidget {
   final String noFront = "noFront.mp3";
   final String soNicht = "soNicht.mp3";
 
-  // VARS
+  // Names
   final String ste = 'steel';
   final String jus = 'justin';
   final String ung = 'ungespielt';
@@ -113,17 +113,19 @@ class Soundboard extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 Container(
-                    padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                        color: Color.fromRGBO(52, 73, 94, 1),
-                        borderRadius: BorderRadius.circular(7)),
-                    child: Text(
-                      'Montanablack',
-                      style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    )),
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(52, 73, 94, 1),
+                    borderRadius: BorderRadius.circular(7),
+                  ),
+                  child: Text(
+                    'Montanablack',
+                    style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
+                ),
                 Row(
                   children: <Widget>[
                     SoundButton(text: 'Aha', path: aha, type: mon),
@@ -284,22 +286,24 @@ class Soundboard extends StatelessWidget {
                     )
                   ],
                 ),
-                Row(children: <Widget>[
-                  SoundButton(
-                    text: 'Wichtiger als \'ne Rolex',
-                    path: wichtigerAlsNeRolex,
-                    type: mon,
-                  ),
-                  SoundButton(
-                      text: 'Nächster Schritt',
-                      path: derNaechsteSchritt,
-                      type: mon),
-                  SoundButton(
-                    text: '24 Minuten Realtalk',
-                    path: minuten24,
-                    type: mon,
-                  )
-                ]),
+                Row(
+                  children: <Widget>[
+                    SoundButton(
+                      text: 'Wichtiger als \'ne Rolex',
+                      path: wichtigerAlsNeRolex,
+                      type: mon,
+                    ),
+                    SoundButton(
+                        text: 'Nächster Schritt',
+                        path: derNaechsteSchritt,
+                        type: mon),
+                    SoundButton(
+                      text: '24 Minuten Realtalk',
+                      path: minuten24,
+                      type: mon,
+                    )
+                  ],
+                ),
                 Row(
                   children: <Widget>[
                     SoundButton(
@@ -314,22 +318,22 @@ class Soundboard extends StatelessWidget {
                         type: mon)
                   ],
                 ),
-
-                // knossi
                 Padding(
                   padding: EdgeInsets.only(top: 15),
                   child: Container(
-                      padding: EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                          color: Colors.yellow,
-                          borderRadius: BorderRadius.circular(7)),
-                      child: Text(
-                        'Knossi',
-                        style: TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      )),
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.yellow,
+                      borderRadius: BorderRadius.circular(7),
+                    ),
+                    child: Text(
+                      'Knossi',
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                  ),
                 ),
                 Row(
                   children: <Widget>[
@@ -346,58 +350,66 @@ class Soundboard extends StatelessWidget {
                     ),
                   ],
                 ),
-                Row(children: <Widget>[
-                  SoundButton(text: 'Gönn!', path: goenn, type: kno),
-                  SoundButton(text: 'Türk. Gesang', path: tuerkGes, type: kno),
-                  SoundButton(
-                      text: 'Albino Türke', path: albinoTuerke, type: kno)
-                ]),
-
-                Row(children: <Widget>[
-                  SoundButton(
-                    text: 'Scheiße',
-                    path: scheisse,
-                    type: kno,
-                  ),
-                  SoundButton(text: 'Alge', path: alge, type: kno),
-                  SoundButton(
-                      text: 'Freudesschrei', path: freudesschrei, type: kno)
-                ]),
-
-                Padding(
-                    padding: EdgeInsets.only(top: 15),
-                    child: Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(7)),
-                        child: Text(
-                          'Standart Skill',
-                          style: TextStyle(
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        ))),
-
-                Row(children: <Widget>[
-                  SoundButton(
-                      text: 'Dichter Nebel', path: dichterNebel, type: sta),
-                  SoundButton(
-                      text: 'Siegesmusik', path: epischerSieg, type: sta),
-                  SoundButton(text: 'Paulberger', path: paulBerger, type: sta)
-                ]),
-
-                Row(children: <Widget>[
-                  SoundButton(text: 'Nebelix', path: nebelix, type: sta)
-                ]),
-
+                Row(
+                  children: <Widget>[
+                    SoundButton(text: 'Gönn!', path: goenn, type: kno),
+                    SoundButton(
+                        text: 'Türk. Gesang', path: tuerkGes, type: kno),
+                    SoundButton(
+                        text: 'Albino Türke', path: albinoTuerke, type: kno)
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    SoundButton(
+                      text: 'Scheiße',
+                      path: scheisse,
+                      type: kno,
+                    ),
+                    SoundButton(text: 'Alge', path: alge, type: kno),
+                    SoundButton(
+                        text: 'Freudesschrei', path: freudesschrei, type: kno)
+                  ],
+                ),
                 Padding(
                   padding: EdgeInsets.only(top: 15),
                   child: Container(
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                        color: Colors.orange,
-                        borderRadius: BorderRadius.circular(7)),
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(7),
+                    ),
+                    child: Text(
+                      'Standart Skill',
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                  ),
+                ),
+                Row(
+                  children: <Widget>[
+                    SoundButton(
+                        text: 'Dichter Nebel', path: dichterNebel, type: sta),
+                    SoundButton(
+                        text: 'Siegesmusik', path: epischerSieg, type: sta),
+                    SoundButton(text: 'Paulberger', path: paulBerger, type: sta)
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    SoundButton(text: 'Nebelix', path: nebelix, type: sta)
+                  ],
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 15),
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.orange,
+                      borderRadius: BorderRadius.circular(7),
+                    ),
                     child: Text(
                       'Ungespielt',
                       style: TextStyle(
@@ -407,49 +419,58 @@ class Soundboard extends StatelessWidget {
                     ),
                   ),
                 ),
-                Row(children: <Widget>[
-                  SoundButton(
-                      text: 'Tiger wiegt \'ne Tonne',
-                      path: tigerTonne,
-                      type: ung),
-                  SoundButton(text: 'Pati Patu', path: patiPatu, type: ung),
-                  SoundButton(
-                      text: 'Milch ist Gift', path: milchIstGift, type: ung)
-                ]),
-
+                Row(
+                  children: <Widget>[
+                    SoundButton(
+                        text: 'Tiger wiegt \'ne Tonne',
+                        path: tigerTonne,
+                        type: ung),
+                    SoundButton(text: 'Pati Patu', path: patiPatu, type: ung),
+                    SoundButton(
+                        text: 'Milch ist Gift', path: milchIstGift, type: ung)
+                  ],
+                ),
                 Padding(
-                    padding: EdgeInsets.only(top: 15),
-                    child: Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            color: Colors.pinkAccent,
-                            borderRadius: BorderRadius.circular(7)),
-                        child: Text('Justin',
-                            style: TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white)))),
-
-                Row(children: <Widget>[
-                  SoundButton(
-                      text: 'Sieht man das', path: siehtManDas, type: jus),
-                  SoundButton(
-                      text: 'Tägliche Boss', path: derTaeglicheBoss, type: jus),
-                  SoundButton(text: 'Lego-Boss', path: derLegoBoss, type: jus)
-                ]),
-
-                Row(children: <Widget>[
-                  SoundButton(
-                      text: 'Allergische Boss',
-                      path: derAllergischeBoss,
-                      type: jus),
-                  SoundButton(
-                      text: 'Reaktions-Boss',
-                      path: derReaktionsBoss,
-                      type: jus),
-                  SoundButton(text: 'Eisboss', path: derEisBoss, type: jus)
-                ]),
-
+                  padding: EdgeInsets.only(top: 15),
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.pinkAccent,
+                      borderRadius: BorderRadius.circular(7),
+                    ),
+                    child: Text(
+                      'Justin',
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                  ),
+                ),
+                Row(
+                  children: <Widget>[
+                    SoundButton(
+                        text: 'Sieht man das', path: siehtManDas, type: jus),
+                    SoundButton(
+                        text: 'Tägliche Boss',
+                        path: derTaeglicheBoss,
+                        type: jus),
+                    SoundButton(text: 'Lego-Boss', path: derLegoBoss, type: jus)
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    SoundButton(
+                        text: 'Allergische Boss',
+                        path: derAllergischeBoss,
+                        type: jus),
+                    SoundButton(
+                        text: 'Reaktions-Boss',
+                        path: derReaktionsBoss,
+                        type: jus),
+                    SoundButton(text: 'Eisboss', path: derEisBoss, type: jus)
+                  ],
+                ),
                 Row(
                   children: <Widget>[
                     SoundButton(
@@ -464,23 +485,26 @@ class Soundboard extends StatelessWidget {
                         text: 'Finanzboss', path: derFinanzBoss, type: jus),
                   ],
                 ),
-
-                Row(children: <Widget>[
-                  SoundButton(text: 'Lache', path: justinLache, type: jus),
-                  SoundButton(text: 'Zehner', path: zehner, type: jus),
-                  SoundButton(text: 'No Front', path: noFront, type: jus)
-                ]),
-
-                Row(children: <Widget>[
-                  SoundButton(text: 'So Nicht', path: soNicht, type: jus)
-                ]),
+                Row(
+                  children: <Widget>[
+                    SoundButton(text: 'Lache', path: justinLache, type: jus),
+                    SoundButton(text: 'Zehner', path: zehner, type: jus),
+                    SoundButton(text: 'No Front', path: noFront, type: jus)
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    SoundButton(text: 'So Nicht', path: soNicht, type: jus)
+                  ],
+                ),
                 Padding(
                   padding: EdgeInsets.only(top: 15),
                   child: Container(
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(7)),
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(7),
+                    ),
                     child: Text(
                       'Steel',
                       style: TextStyle(

@@ -11,8 +11,18 @@ class AboutTheApp extends StatelessWidget {
           padding: EdgeInsets.all(10),
           child: Column(
             children: <Widget>[
+               Padding(
+                padding: EdgeInsets.only(top: 0),
+                child: Center(
+                  child: Text(
+                    "Feedback",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
               Padding(
-                padding: EdgeInsets.only(top: 20),
+                padding: EdgeInsets.only(top: 5),
                 child: RichText(
                   textAlign: TextAlign.justify,
                   text: TextSpan(
@@ -20,22 +30,17 @@ class AboutTheApp extends StatelessWidget {
                     children: <TextSpan>[
                       TextSpan(
                         text:
-                            "Wenn du der Meinung bist, dass bestimmte Sounds in diesem Soundboard fehlen, oder uns kontaktieren möchtest, dann bitten wir dich inbrünstig uns über dein Anlegen zu informieren, danke! Unser Hauptprogrammierer auf Instagram:",
+                            "Wenn du der Meinung bist, dass bestimmte Sounds in diesem Soundboard fehlen, oder uns kontaktieren möchtest, dann bitten wir dich inbrünstig uns über dein Anlegen zu informieren, danke!",
                         style: TextStyle(
                           fontSize: 17,
                           fontWeight: FontWeight.w300,
                         ),
                       ),
                       TextSpan(
-                          text: " anuzzz_senpai",
-                          style: TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.w300,
-                              color: Colors.blueAccent)),
-                      TextSpan(
-                          text: ". Unsere Kontakt-E-Mail:",
-                          style: TextStyle(
-                              fontSize: 17, fontWeight: FontWeight.w300))
+                        text: ". Unsere Kontakt-E-Mail:",
+                        style: TextStyle(
+                            fontSize: 17, fontWeight: FontWeight.w300),
+                      )
                     ],
                   ),
                 ),
@@ -59,28 +64,24 @@ class AboutTheApp extends StatelessWidget {
                   )),
                 ),
               ),
-              Padding(
-                  padding: EdgeInsets.only(top: 20),
-                  child: Center(
-                      child: Text("Spenden",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.bold)))),
-              Padding(
-                padding: EdgeInsets.only(top: 15),
+               Padding(
+                padding: EdgeInsets.only(top: 10),
                 child: Center(
                   child: Text(
-                    "Wenn du uns Geld schenken willst, kontaktier' uns...",
+                    "Maxi-King",
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w300),
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
-              Container(
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(30),
-                  child: Image.asset("assets/icon/derBoss.png",
-                      width: 550, height: 200, fit: BoxFit.fitWidth),
+              Padding(
+                padding: EdgeInsets.only(top: 5),
+                child: Center(
+                  child: Text(
+                    "Wenn du uns einen Maxi-King spendieren willst, kontaktier uns!",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w300),
+                  ),
                 ),
               ),
             ],
