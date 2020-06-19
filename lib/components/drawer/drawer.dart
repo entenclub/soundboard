@@ -31,7 +31,7 @@ class AppDrawer extends StatelessWidget {
                     Align(
                       alignment: Alignment.center,
                       child: CircleAvatar(
-                          backgroundImage: AssetImage("assets/icons/logo.png"),
+                          backgroundImage: AssetImage("assets/images/logo.png"),
                           radius: 50.0),
                     ),
                   ],
