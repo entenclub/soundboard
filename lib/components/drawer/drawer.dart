@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:german_meme_soundboard/components/drawer/settings.dart';
+
+import 'package:german_meme_soundboard/components/soundboards/youtuber/montananblack.dart';
+import 'package:german_meme_soundboard/components/soundboards/youtuber/knossi.dart';
+import 'package:german_meme_soundboard/components/soundboards/youtuber/standartskill.dart';
+import 'package:german_meme_soundboard/components/soundboards/youtuber/ungespielt.dart';
+import 'package:german_meme_soundboard/components/soundboards/youtuber/justin.dart';
+
 import 'package:german_meme_soundboard/components/soundboards/youtuber.dart';
 import 'package:german_meme_soundboard/components/soundboards/musicians.dart';
 import 'package:german_meme_soundboard/components/soundboards/miscellaneous.dart';
@@ -36,7 +43,75 @@ class AppDrawer extends StatelessWidget {
                   ListTile(
                     leading: Icon(Icons.person_outline),
                     title: Text("Montanablack"),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Montanablack(),
+                        ),
+                      );
+                    },
                   ),
+                  ListTile(
+                    leading: FaIcon(
+                      FontAwesomeIcons.crown,
+                      size: 20.0,
+                    ),
+                    title: Text("Knossi"),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Knossi(),
+                        ),
+                      );
+                    },
+                  ),
+                  ListTile(
+                    leading: FaIcon(
+                      FontAwesomeIcons.gamepad,
+                      size: 20.0,
+                    ),
+                    title: Text("Standart Skill"),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Standartskill(),
+                        ),
+                      );
+                    },
+                  ),
+                  ListTile(
+                    leading: FaIcon(
+                      FontAwesomeIcons.carrot,
+                      size: 20.0,
+                    ),
+                    title: Text("Ungespielt"),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Ungespielt(),
+                        ),
+                      );
+                    },
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.watch,
+                      size: 20.0,
+                    ),
+                    title: Text("Justin"),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Justin(),
+                        ),
+                      );
+                    },
+                  )
                 ],
               ),
               ExpansionTile(
