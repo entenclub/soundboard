@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'soundButton.dart';
+import 'package:german_meme_soundboard/components/soundboards/soundButton.dart';
 
-class Soundboard extends StatelessWidget {
-
-  // monte
+class MusicianSoundboard extends StatelessWidget {
   final String aha = 'aha.mp3';
   final String bestSkin = 'bestskin.mp3';
   final String boosterPops = 'boosterpops.mp3';
@@ -105,7 +103,8 @@ class Soundboard extends StatelessWidget {
   final String mon = 'monte';
 
   Widget build(BuildContext context) {
-    return (ListView(
+    return (Scaffold(appBar: AppBar(title: Text("Youtuber Sounds"),),
+      body: ListView(
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.all(20),
@@ -524,6 +523,6 @@ class Soundboard extends StatelessWidget {
           ),
         )
       ],
-    ));
+    )));
   }
 }

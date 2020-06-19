@@ -3,7 +3,6 @@ import 'package:audioplayers/audio_cache.dart';
 import 'package:esys_flutter_share/esys_flutter_share.dart';
 import 'package:flutter/services.dart';
 
-int pressCount = 0;
 
 class SoundButton extends StatelessWidget {
   final String text;

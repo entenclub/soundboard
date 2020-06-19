@@ -1,27 +1,44 @@
-name: montesoundboard
-description: A drippy SoundBoard.
+name: german_meme_soundboard
+description: A drippy soundboard.
+
 version: 1.0.0+1
+
 environment:
   sdk: ">=2.1.0 <3.0.0"
+
 dependencies:
   flutter:
     sdk: flutter
+
+  
+  cupertino_icons: ^0.1.2
+
+  font_awesome_flutter: ^8.8.1
+  dynamic_theme: ^1.0.1
+  shared_preferences: ^0.5.7
+  url_launcher: ^5.0.2
   audioplayers: ^0.13.2
   link: ^1.0.0
-  url_launcher: ^5.0.2
-  path_provider: 
   esys_flutter_share: ^1.0.0 
+  flutter_whatsnew:
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: "^0.7.3"
+
 flutter_icons:
   android: "launcher_icon"
   ios: true
-  image_path: "assets/icon/icon.jpg"
+  image_path: "assets/icon/logo.png"
+
 flutter:
+
   uses-material-design: true
-  assets:
+
+  assets: 
     - assets/
     - assets/sounds/
-    - assets/icon/
+    - assets/icons/
+    - assets/CHANGELOG.md
