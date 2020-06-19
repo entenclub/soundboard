@@ -13,7 +13,7 @@ dependencies:
   
   cupertino_icons: ^0.1.2
 
-  font_awesome_flutter: ^8.8.1
+  font_awesome_flutter:
   dynamic_theme: ^1.0.1
   shared_preferences: ^0.5.7
   url_launcher: ^5.0.2
@@ -41,4 +41,3 @@ flutter:
     - assets/
     - assets/sounds/
     - assets/icons/
-    - assets/CHANGELOG.md

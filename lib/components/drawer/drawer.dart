@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:german_meme_soundboard/components/drawer/settings.dart';
+import 'package:german_meme_soundboard/components/soundboards/youtuber/helddersteine.dart';
 
 import 'package:german_meme_soundboard/components/soundboards/youtuber/montananblack.dart';
 import 'package:german_meme_soundboard/components/soundboards/youtuber/knossi.dart';
@@ -98,8 +99,8 @@ class AppDrawer extends StatelessWidget {
                     },
                   ),
                   ListTile(
-                    leading: Icon(
-                      Icons.watch,
+                    leading: FaIcon(
+                      FontAwesomeIcons.fillDrip,
                       size: 20.0,
                     ),
                     title: Text("Justin"),
@@ -110,6 +111,15 @@ class AppDrawer extends StatelessWidget {
                           builder: (context) => Justin(),
                         ),
                       );
+                    },
+                  ),
+                  ListTile(
+                    title: Text("Held der Steine"),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Helddersteine()));
                     },
                   )
                 ],
@@ -125,7 +135,7 @@ class AppDrawer extends StatelessWidget {
                 ],
               ),
               ListTile(
-                leading: FaIcon(FontAwesomeIcons.asterisk),
+                leading: FaIcon(FontAwesomeIcons.asterisk, size: 20.0,),
                 title: Text("Andere Sounds"),
                 onTap: () {
                   Navigator.push(
@@ -181,6 +191,19 @@ class AppDrawer extends StatelessWidget {
                       }
                     },
                   ),
+                  ListTile(
+                    leading: Icon(Icons.code),
+                    title: Text("Quellcode"),
+                    onTap: () async {
+                      final codeUrl =
+                          "https://github.com/Sheesher/German-Meme-Soundboard";
+                      if (await canLaunch(codeUrl)) {
+                        await launch(codeUrl);
+                      } else {
+                        throw 'Cound not launch $codeUrl';
+                      }
+                    },
+                  )
                 ],
               ),
             ),
