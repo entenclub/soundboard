@@ -29,22 +29,21 @@ dev_dependencies:
 flutter_icons:
   android: 'launcher_icon'
   ios: true
-  image_path: 'assets/icon/logo.png'
+  image_path: 'assets/images/logo.png'
 
 flutter:
   uses-material-design: true
 
   assets:
     - assets/
-<<<<<<< HEAD
     - assets/sounds/
-    - assets/icons/
-=======
+    - assets/images/
 
     # YouTuber
-    - assets/sounds/youtuber/montanablack
-    - assets/sounds/youtuber/justin
-    - assets/sounds/youtuber/helddersteine
+    - assets/sounds/youtuber/montanablack/
+    - assets/sounds/youtuber/justin/
+    - assets/sounds/youtuber/helddersteine/
+    - assets/sounds/youtuber/standartskill/
+    - assets/sounds/youtuber/ungespielt/
 
     - assets/images/
->>>>>>> 90648df49036062b52183a04c7d84c2abec894e5

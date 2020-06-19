@@ -11,11 +11,11 @@ class SoundButton extends StatelessWidget {
 
   void onClick() {
     AudioCache player = AudioCache();
-    player.play("sounds/$path");
+    player.play("sounds/youtuber/$type/$path");
   }
 
   Future<void> onLongPress(BuildContext context) async {
-    final ByteData bytes = await rootBundle.load('assets/sounds/$path');
+    final ByteData bytes = await rootBundle.load('assets/sounds/$type/$path');
     await Share.file('', '$path', bytes.buffer.asUint8List(), 'audio/mpeg');
   }
 
@@ -23,7 +23,7 @@ class SoundButton extends StatelessWidget {
   Widget build(BuildContext context) {
     var c;
     switch (this.type) {
-      case 'monte':
+      case 'montanablack':
         c = Color.fromRGBO(52, 73, 94, 1);
         break;
       case 'knossi':
