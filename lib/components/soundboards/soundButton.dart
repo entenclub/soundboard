@@ -8,18 +8,19 @@ class SoundButton extends StatelessWidget {
   final String text;
   final String path;
   final String type;
+  final String sType;
 
   void onClick() {
     AudioCache player = AudioCache();
-    player.play("sounds/youtuber/$type/$path");
+    player.play("sounds/$sType/$type/$path");
   }
 
   Future<void> onLongPress(BuildContext context) async {
-    final ByteData bytes = await rootBundle.load('assets/sounds/$type/$path');
+    final ByteData bytes = await rootBundle.load('assets/sounds/$sType/$type/$path');
     await Share.file('', '$path', bytes.buffer.asUint8List(), 'audio/mpeg');
   }
 
-  SoundButton({this.text, this.path, this.type});
+  SoundButton({this.text, this.path, this.type, this.sType});
   Widget build(BuildContext context) {
     var c;
     switch (this.type) {

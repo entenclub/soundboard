@@ -19,6 +19,7 @@ class Justin extends StatelessWidget {
   final String soNicht = "soNicht.mp3";
 
   final String jus = 'justin';
+  final String y = "youtuber";
 
   Widget build(BuildContext context) {
     return (Scaffold(
@@ -35,52 +36,99 @@ class Justin extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       SoundButton(
-                          text: 'Sieht man das', path: siehtManDas, type: jus),
+                        text: 'Sieht man das',
+                        path: siehtManDas,
+                        type: jus,
+                        sType: y,
+                      ),
                       SoundButton(
-                          text: 'Tägliche Boss',
-                          path: derTaeglicheBoss,
-                          type: jus),
+                        text: 'Tägliche Boss',
+                        path: derTaeglicheBoss,
+                        type: jus,
+                        sType: y,
+                      ),
                       SoundButton(
-                          text: 'Lego-Boss', path: derLegoBoss, type: jus),
+                        text: 'Lego-Boss',
+                        path: derLegoBoss,
+                        type: jus,
+                        sType: y,
+                      ),
                     ],
                   ),
                   Row(
                     children: <Widget>[
                       SoundButton(
-                          text: 'Allergische Boss',
-                          path: derAllergischeBoss,
-                          type: jus),
+                        text: 'Allergische Boss',
+                        path: derAllergischeBoss,
+                        type: jus,
+                        sType: y,
+                      ),
                       SoundButton(
-                          text: 'Reaktions-Boss',
-                          path: derReaktionsBoss,
-                          type: jus),
-                      SoundButton(text: 'Eisboss', path: derEisBoss, type: jus),
+                        text: 'Reaktions-Boss',
+                        path: derReaktionsBoss,
+                        type: jus,
+                        sType: y,
+                      ),
+                      SoundButton(
+                        text: 'Eisboss',
+                        path: derEisBoss,
+                        type: jus,
+                        sType: y,
+                      ),
                     ],
                   ),
                   Row(
                     children: <Widget>[
                       SoundButton(
-                          text: 'Relevante Fashionboss',
-                          path: derRelevanteFashionBoss,
-                          type: jus),
+                        text: 'Relevante Fashionboss',
+                        path: derRelevanteFashionBoss,
+                        type: jus,
+                        sType: y,
+                      ),
                       SoundButton(
-                          text: 'Konsequente Boss',
-                          path: derKonsequenteBoss,
-                          type: jus),
+                        text: 'Konsequente Boss',
+                        path: derKonsequenteBoss,
+                        type: jus,
+                        sType: y,
+                      ),
                       SoundButton(
-                          text: 'Finanzboss', path: derFinanzBoss, type: jus),
+                        text: 'Finanzboss',
+                        path: derFinanzBoss,
+                        type: jus,
+                        sType: y,
+                      ),
                     ],
                   ),
                   Row(
                     children: <Widget>[
-                      SoundButton(text: 'Lache', path: justinLache, type: jus),
-                      SoundButton(text: 'Zehner', path: zehner, type: jus),
-                      SoundButton(text: 'No Front', path: noFront, type: jus),
+                      SoundButton(
+                        text: 'Lache',
+                        path: justinLache,
+                        type: jus,
+                        sType: y,
+                      ),
+                      SoundButton(
+                        text: 'Zehner',
+                        path: zehner,
+                        type: jus,
+                        sType: y,
+                      ),
+                      SoundButton(
+                        text: 'No Front',
+                        path: noFront,
+                        type: jus,
+                        sType: y,
+                      ),
                     ],
                   ),
                   Row(
                     children: <Widget>[
-                      SoundButton(text: 'So Nicht', path: soNicht, type: jus),
+                      SoundButton(
+                        text: 'So Nicht',
+                        path: soNicht,
+                        type: jus,
+                        sType: y,
+                      ),
                     ],
                   ),
                 ],

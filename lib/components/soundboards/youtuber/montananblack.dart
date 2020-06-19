@@ -58,6 +58,7 @@ class Montanablack extends StatelessWidget {
       "kommtAuchMalWasAnderesAusserFortnite.mp3";
 
   final String mon = 'montanablack';
+  final String y = "youtuber";
 
   Widget build(BuildContext context) {
     return (Scaffold(
@@ -73,16 +74,34 @@ class Montanablack extends StatelessWidget {
                 children: <Widget>[
                   Row(
                     children: <Widget>[
-                      SoundButton(text: "Aha", path: aha, type: mon)
+                      SoundButton(
+                        text: "Aha",
+                        path: aha,
+                        type: mon,
+                        sType: y,
+                      )
                     ],
                   ),
                   Row(
                     children: <Widget>[
-                      SoundButton(text: 'Aha', path: aha, type: mon),
                       SoundButton(
-                          text: 'Bester Skin', path: bestSkin, type: mon),
+                        text: 'Aha',
+                        path: aha,
+                        type: mon,
+                        sType: y,
+                      ),
                       SoundButton(
-                          text: 'Booster knallt', path: boosterPops, type: mon)
+                        text: 'Bester Skin',
+                        path: bestSkin,
+                        type: mon,
+                        sType: y,
+                      ),
+                      SoundButton(
+                        text: 'Booster knallt',
+                        path: boosterPops,
+                        type: mon,
+                        sType: y,
+                      )
                     ],
                   ),
                   Row(
@@ -90,110 +109,174 @@ class Montanablack extends StatelessWidget {
                       SoundButton(
                           text: 'Die Sonne lacht',
                           path: sunsLaughing,
-                          type: mon),
+                          type: mon,
+                          sType: y),
                       SoundButton(
                         text: 'Ehre genommen',
                         path: honorTaken,
                         type: mon,
+                        sType: y,
                       ),
                       SoundButton(
-                          text: 'Ich bin\'s Tim', path: iamTim, type: mon),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                      SoundButton(text: 'Jippie!', path: jippie, type: mon),
-                      SoundButton(text: 'Lache', path: laugh, type: mon),
-                      SoundButton(text: 'Manno!', path: manno, type: mon),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                      SoundButton(
-                          text: 'Mutter anrufen', path: momCall, type: mon),
-                      SoundButton(text: 'OMG', path: omg, type: mon),
-                      SoundButton(
-                          text: 'OMG (Casino)', path: omgCasino, type: mon),
+                          text: 'Ich bin\'s Tim',
+                          path: iamTim,
+                          type: mon,
+                          sType: y),
                     ],
                   ),
                   Row(
                     children: <Widget>[
                       SoundButton(
-                          text: 'Rausgeholt', path: freshAir, type: mon),
+                          text: 'Jippie!', path: jippie, type: mon, sType: y),
                       SoundButton(
-                          text: 'Rein in die Olga', path: rido, type: mon),
+                          text: 'Lache', path: laugh, type: mon, sType: y),
+                      SoundButton(
+                          text: 'Manno!', path: manno, type: mon, sType: y),
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      SoundButton(
+                          text: 'Mutter anrufen',
+                          path: momCall,
+                          type: mon,
+                          sType: y),
+                      SoundButton(text: 'OMG', path: omg, type: mon, sType: y),
+                      SoundButton(
+                          text: 'OMG (Casino)',
+                          path: omgCasino,
+                          type: mon,
+                          sType: y),
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      SoundButton(
+                          text: 'Rausgeholt',
+                          path: freshAir,
+                          type: mon,
+                          sType: y),
+                      SoundButton(
+                          text: 'Rein in die Olga',
+                          path: rido,
+                          type: mon,
+                          sType: y),
                       SoundButton(
                           text: 'Selbstständig',
                           path: autonomousExplaining,
-                          type: mon)
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                      SoundButton(text: 'Thaddäus', path: spongebob, type: mon),
-                      SoundButton(text: 'Stößchen', path: cheers, type: mon),
-                      SoundButton(
-                          text: 'Creator Code', path: creatorCode, type: mon),
+                          type: mon,
+                          sType: y)
                     ],
                   ),
                   Row(
                     children: <Widget>[
                       SoundButton(
-                          text: 'Frauen-Realtalk', path: iq300, type: mon),
-                      SoundButton(text: 'Moin Moin', path: moinmoin, type: mon),
-                      SoundButton(text: 'Bam Bam', path: bambam, type: mon),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                      SoundButton(text: 'Dinkel', path: dinkel, type: mon),
-                      SoundButton(text: 'Fische', path: fish, type: mon),
-                      SoundButton(text: 'Augen', path: ikue, type: mon),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                      SoundButton(text: 'Kanacke', path: kanacke, type: mon),
+                          text: 'Thaddäus',
+                          path: spongebob,
+                          type: mon,
+                          sType: y),
                       SoundButton(
-                          text: 'Käsebrötchen', path: cheese, type: mon),
+                          text: 'Stößchen', path: cheers, type: mon, sType: y),
                       SoundButton(
-                          text: 'Man kennt ihn', path: uknowhim, type: mon),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                      SoundButton(text: 'Mehmet', path: mehmet, type: mon),
-                      SoundButton(text: 'Messi', path: gotMessi, type: mon),
-                      SoundButton(
-                          text: 'Nasenbluten', path: nosebleed, type: mon),
+                          text: 'Creator Code',
+                          path: creatorCode,
+                          type: mon,
+                          sType: y),
                     ],
                   ),
                   Row(
                     children: <Widget>[
                       SoundButton(
-                          text: 'Oben inna Süd', path: obenInnaSued, type: mon),
+                          text: 'Frauen-Realtalk',
+                          path: iq300,
+                          type: mon,
+                          sType: y),
                       SoundButton(
-                          text: 'Rambazamba', path: rambazamba, type: mon),
+                          text: 'Moin Moin',
+                          path: moinmoin,
+                          type: mon,
+                          sType: y),
+                      SoundButton(
+                          text: 'Bam Bam', path: bambam, type: mon, sType: y),
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      SoundButton(
+                          text: 'Dinkel', path: dinkel, type: mon, sType: y),
+                      SoundButton(
+                          text: 'Fische', path: fish, type: mon, sType: y),
+                      SoundButton(
+                          text: 'Augen', path: ikue, type: mon, sType: y),
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      SoundButton(
+                          text: 'Kanacke', path: kanacke, type: mon, sType: y),
+                      SoundButton(
+                          text: 'Käsebrötchen',
+                          path: cheese,
+                          type: mon,
+                          sType: y),
+                      SoundButton(
+                          text: 'Man kennt ihn',
+                          path: uknowhim,
+                          type: mon,
+                          sType: y),
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      SoundButton(
+                          text: 'Mehmet', path: mehmet, type: mon, sType: y),
+                      SoundButton(
+                          text: 'Messi', path: gotMessi, type: mon, sType: y),
+                      SoundButton(
+                          text: 'Nasenbluten',
+                          path: nosebleed,
+                          type: mon,
+                          sType: y),
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      SoundButton(
+                          text: 'Oben inna Süd',
+                          path: obenInnaSued,
+                          type: mon,
+                          sType: y),
+                      SoundButton(
+                          text: 'Rambazamba',
+                          path: rambazamba,
+                          type: mon,
+                          sType: y),
                       SoundButton(
                         text: 'Verpiss dich!',
                         path: fuckOff,
                         type: mon,
+                        sType: y,
                       )
                     ],
                   ),
                   Row(
                     children: <Widget>[
                       SoundButton(
-                          text: 'On the Road', path: onTheRoad, type: mon),
+                          text: 'On the Road',
+                          path: onTheRoad,
+                          type: mon,
+                          sType: y),
                       SoundButton(
                         text: 'Erster Sieg',
                         path: firstWin,
                         type: mon,
+                        sType: y,
                       ),
                       SoundButton(
                         text: 'Verliebt',
                         path: verliebt,
                         type: mon,
+                        sType: y,
                       )
                     ],
                   ),
@@ -203,15 +286,18 @@ class Montanablack extends StatelessWidget {
                         text: 'Say My Name',
                         path: sayMyName,
                         type: mon,
+                        sType: y,
                       ),
                       SoundButton(
                           text: 'Wer bist du denn?',
                           path: werBistDuDenn,
-                          type: mon),
+                          type: mon,
+                          sType: y),
                       SoundButton(
                           text: 'Man muss nicht ...',
                           path: manMussNichtAlles,
-                          type: mon),
+                          type: mon,
+                          sType: y),
                     ],
                   ),
                   Row(
@@ -220,9 +306,14 @@ class Montanablack extends StatelessWidget {
                         text: 'Heeyyy!',
                         path: hey,
                         type: mon,
+                        sType: y,
                       ),
-                      SoundButton(text: 'Kommisar', path: kommisar, type: mon),
-                      SoundButton(text: 'Ne', path: ne, type: mon)
+                      SoundButton(
+                          text: 'Kommisar',
+                          path: kommisar,
+                          type: mon,
+                          sType: y),
+                      SoundButton(text: 'Ne', path: ne, type: mon, sType: y)
                     ],
                   ),
                   Row(
@@ -231,13 +322,18 @@ class Montanablack extends StatelessWidget {
                         text: 'Hmm...',
                         path: hmm,
                         type: mon,
+                        sType: y,
                       ),
                       SoundButton(
-                          text: 'Das geht klar', path: dasGehtKlar, type: mon),
+                          text: 'Das geht klar',
+                          path: dasGehtKlar,
+                          type: mon,
+                          sType: y),
                       SoundButton(
                         text: 'Lambo',
                         path: lambo,
                         type: mon,
+                        sType: y,
                       )
                     ],
                   ),
@@ -247,15 +343,18 @@ class Montanablack extends StatelessWidget {
                         text: 'Wichtiger als \'ne Rolex',
                         path: wichtigerAlsNeRolex,
                         type: mon,
+                        sType: y,
                       ),
                       SoundButton(
                           text: 'Nächster Schritt',
                           path: derNaechsteSchritt,
-                          type: mon),
+                          type: mon,
+                          sType: y),
                       SoundButton(
                         text: '24 Minuten Realtalk',
                         path: minuten24,
                         type: mon,
+                        sType: y,
                       )
                     ],
                   ),
@@ -264,15 +363,18 @@ class Montanablack extends StatelessWidget {
                       SoundButton(
                           text: 'Schlafrhythmus',
                           path: schlafrhythmus,
-                          type: mon),
+                          type: mon,
+                          sType: y),
                       SoundButton(
                           text: 'Absoluter Realtalk',
                           path: realtalk,
-                          type: mon),
+                          type: mon,
+                          sType: y),
                       SoundButton(
                           text: 'Kommt auch mal was anderes?',
                           path: kommtAuchMalWasAnderes,
-                          type: mon)
+                          type: mon,
+                          sType: y)
                     ],
                   ),
                 ],

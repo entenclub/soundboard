@@ -13,7 +13,8 @@ class Knossi extends StatelessWidget {
   final String freudesschrei = 'Freudesschrei.mp3';
   final String alge = 'Alge.mp3';
 
-  final String kno = 'knossi';
+  final String kno = "knossi";
+  final String y = "youtuber";
 
   Widget build(BuildContext context) {
     return (Scaffold(
@@ -29,26 +30,26 @@ class Knossi extends StatelessWidget {
                 children: <Widget>[
                   Row(
                     children: <Widget>[
-                      SoundButton(text: 'RTL', path: rtl, type: kno),
+                      SoundButton(text: 'RTL', path: rtl, type: kno, sType: y),
                       SoundButton(
                         text: 'Jasmin',
                         path: jasmin,
-                        type: kno,
+                        type: kno, sType: y,
                       ),
                       SoundButton(
                         text: 'Auf 50€',
                         path: auf50euro,
-                        type: kno,
+                        type: kno, sType: y,
                       ),
                     ],
                   ),
                   Row(
                     children: <Widget>[
-                      SoundButton(text: 'Gönn!', path: goenn, type: kno),
+                      SoundButton(text: 'Gönn!', path: goenn, type: kno, sType: y),
                       SoundButton(
-                          text: 'Türk. Gesang', path: tuerkGes, type: kno),
+                          text: 'Türk. Gesang', path: tuerkGes, type: kno, sType: y),
                       SoundButton(
-                          text: 'Albino Türke', path: albinoTuerke, type: kno),
+                          text: 'Albino Türke', path: albinoTuerke, type: kno, sType: y),
                     ],
                   ),
                   Row(
@@ -56,13 +57,13 @@ class Knossi extends StatelessWidget {
                       SoundButton(
                         text: 'Scheiße',
                         path: scheisse,
-                        type: kno,
+                        type: kno, sType: y,
                       ),
-                      SoundButton(text: 'Alge', path: alge, type: kno),
+                      SoundButton(text: 'Alge', path: alge, type: kno, sType: y),
                       SoundButton(
                           text: 'Freudesschrei',
                           path: freudesschrei,
-                          type: kno),
+                          type: kno, sType: y),
                     ],
                   ),
                 ],

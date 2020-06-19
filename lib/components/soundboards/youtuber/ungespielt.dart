@@ -8,6 +8,7 @@ class Ungespielt extends StatelessWidget {
   final String milchIstGift = 'milchIstGift.mp3';
 
   final String ung = "ungespielt";
+  final String y = "youtuber";
 
   Widget build(BuildContext context) {
     return (Scaffold(
@@ -24,14 +25,23 @@ class Ungespielt extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       SoundButton(
-                          text: 'Tiger wiegt \'ne Tonne',
-                          path: tigerTonne,
-                          type: ung),
-                      SoundButton(text: 'Pati Patu', path: patiPatu, type: ung),
+                        text: 'Tiger wiegt \'ne Tonne',
+                        path: tigerTonne,
+                        type: ung,
+                        sType: y,
+                      ),
                       SoundButton(
-                          text: 'Milch ist Gift',
-                          path: milchIstGift,
-                          type: ung),
+                        text: 'Pati Patu',
+                        path: patiPatu,
+                        type: ung,
+                        sType: y,
+                      ),
+                      SoundButton(
+                        text: 'Milch ist Gift',
+                        path: milchIstGift,
+                        type: ung,
+                        sType: y,
+                      ),
                     ],
                   ),
                 ],

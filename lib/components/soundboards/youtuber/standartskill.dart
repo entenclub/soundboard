@@ -8,6 +8,8 @@ class Standartskill extends StatelessWidget {
   final String nebelix = "nebelix.mp3";
 
   final sta = 'standartskill';
+  final String y = "youtuber";
+
 
   Widget build(BuildContext context) {
     return (Scaffold(
@@ -24,16 +26,16 @@ class Standartskill extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       SoundButton(
-                          text: 'Dichter Nebel', path: dichterNebel, type: sta),
+                          text: 'Dichter Nebel', path: dichterNebel, type: sta, sType: y),
                       SoundButton(
-                          text: 'Siegesmusik', path: epischerSieg, type: sta),
+                          text: 'Siegesmusik', path: epischerSieg, type: sta, sType: y),
                       SoundButton(
-                          text: 'Paulberger', path: paulBerger, type: sta),
+                          text: 'Paulberger', path: paulBerger, type: sta, sType: y),
                     ],
                   ),
                   Row(
                     children: <Widget>[
-                      SoundButton(text: 'Nebelix', path: nebelix, type: sta),
+                      SoundButton(text: 'Nebelix', path: nebelix, type: sta, sType: y),
                     ],
                   ),
                 ],
