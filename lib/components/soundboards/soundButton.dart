@@ -1,8 +1,10 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audio_cache.dart';
-import 'package:esys_flutter_share/esys_flutter_share.dart';
 import 'package:flutter/services.dart';
 
+// 📦 Package imports:
+import 'package:audioplayers/audio_cache.dart';
+import 'package:esys_flutter_share/esys_flutter_share.dart';
 
 class SoundButton extends StatelessWidget {
   final String text;
@@ -48,7 +50,7 @@ class SoundButton extends StatelessWidget {
 
     return Expanded(
       child: Padding(
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(3),
         child: RaisedButton(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(5),

@@ -1,5 +1,7 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 📦 Package imports:
 import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

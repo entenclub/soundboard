@@ -1,19 +1,21 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+// 📦 Package imports:
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+// 🌎 Project imports:
 import 'package:german_meme_soundboard/components/drawer/settings.dart';
 import 'package:german_meme_soundboard/components/soundboards/youtuber/helddersteine.dart';
-
 import 'package:german_meme_soundboard/components/soundboards/youtuber/montananblack.dart';
 import 'package:german_meme_soundboard/components/soundboards/youtuber/knossi.dart';
 import 'package:german_meme_soundboard/components/soundboards/youtuber/standartskill.dart';
 import 'package:german_meme_soundboard/components/soundboards/youtuber/ungespielt.dart';
 import 'package:german_meme_soundboard/components/soundboards/youtuber/justin.dart';
-
 import 'package:german_meme_soundboard/components/soundboards/youtuber.dart';
 import 'package:german_meme_soundboard/components/soundboards/musicians.dart';
 import 'package:german_meme_soundboard/components/soundboards/miscellaneous.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class AppDrawer extends StatelessWidget {
   @override
@@ -182,10 +184,10 @@ class AppDrawer extends StatelessWidget {
                   ),
                   ListTile(
                     leading: Icon(Icons.feedback),
-                    title: Text("Feedback"),
+                    title: Text("Feedback etc."),
                     onTap: () async {
                       final mail =
-                          "mailto:asoysal301@gmail.com?subject=Youtuber Soundboard";
+                          "mailto:asoysal301@gmail.com?subject=Youtuber Soundboard&body=Moin";
                       if (await canLaunch(mail)) {
                         await launch(mail);
                       }

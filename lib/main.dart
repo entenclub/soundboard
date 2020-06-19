@@ -1,6 +1,10 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 📦 Package imports:
 import 'package:dynamic_theme/dynamic_theme.dart';
 
+// 🌎 Project imports:
 import 'package:german_meme_soundboard/components/drawer/drawer.dart';
 
 void main() => runApp(MyApp());

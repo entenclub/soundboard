@@ -1,4 +1,7 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 🌎 Project imports:
 import 'package:german_meme_soundboard/components/soundboards/soundButton.dart';
 
 class Montanablack extends StatelessWidget {
@@ -72,16 +75,6 @@ class Montanablack extends StatelessWidget {
             child: Center(
               child: Column(
                 children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      SoundButton(
-                        text: "Aha",
-                        path: aha,
-                        type: mon,
-                        sType: y,
-                      )
-                    ],
-                  ),
                   Row(
                     children: <Widget>[
                       SoundButton(

@@ -22,9 +22,8 @@ dependencies:
   flutter_whatsnew:
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
   flutter_launcher_icons: '^0.7.3'
+  import_sorter: ^3.1.0
 
 flutter_icons:
   android: 'launcher_icon'
@@ -48,3 +47,6 @@ flutter:
     - assets/sounds/youtuber/knossi/
 
     - assets/images/
+
+import_sorter:
+  emojis: true
