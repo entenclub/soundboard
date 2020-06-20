@@ -373,8 +373,15 @@ class Montanablack extends StatelessWidget {
                 ],
               ),
             ),
-          )
+          ),
         ],
+      ),
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.all(8.0),
+        child: SoundButton(
+          isStopBtn: true,
+          text: 'Stop'
+        ),
       ),
     ));
   }
