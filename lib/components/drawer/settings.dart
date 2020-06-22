@@ -1,8 +1,11 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+import 'dart:async' show Future;
+import 'package:flutter/services.dart' show rootBundle;
 
 // 📦 Package imports:
 import 'package:dynamic_theme/dynamic_theme.dart';
+import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Settings extends StatefulWidget {
@@ -33,6 +36,17 @@ class _SettingsState extends State<Settings> {
                   ? FaIcon(FontAwesomeIcons.solidSun)
                   : FaIcon(FontAwesomeIcons.solidMoon),
               onPressed: changeBrightness,
+            ),
+          ),
+          ListTile(
+            title: Text('Version'),
+            trailing: Text(
+              '',
+              style: TextStyle(color: Colors.yellow),
+            ),
+            leading: IconButton(
+              icon: Icon(Icons.ac_unit),
+              onPressed: null,
             ),
           ),
         ],

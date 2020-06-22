@@ -20,6 +20,7 @@ dependencies:
   link: ^1.0.0
   esys_flutter_share: ^1.0.0
   flutter_whatsnew:
+  path_provider: ^1.6.11
 
 dev_dependencies:
   flutter_launcher_icons: '^0.7.3'
@@ -46,7 +47,8 @@ flutter:
     - assets/sounds/youtuber/ungespielt/
     - assets/sounds/youtuber/knossi/
 
-    - assets/images/
+    # App Version
+    - assets/VERSION.txt
 
 import_sorter:
   emojis: true

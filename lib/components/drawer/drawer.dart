@@ -26,22 +26,9 @@ class AppDrawer extends StatelessWidget {
         Expanded(
           child: ListView(
             children: <Widget>[
-              DrawerHeader(
-                decoration: BoxDecoration(color: null),
-                child: Stack(
-                  children: <Widget>[
-                    Align(
-                      alignment: Alignment.center,
-                      child: CircleAvatar(
-                          backgroundImage: AssetImage("assets/images/logo.png"),
-                          radius: 50.0),
-                    ),
-                  ],
-                ),
-              ),
               ExpansionTile(
                 leading: Icon(Icons.video_library),
-                title: Text("Youtuber Sounds"),
+                title: Text("YouTuber Sounds"),
                 children: <Widget>[
                   ListTile(
                     leading: Icon(Icons.person_outline),
@@ -116,6 +103,10 @@ class AppDrawer extends StatelessWidget {
                     },
                   ),
                   ListTile(
+                    leading: FaIcon(
+                      FontAwesomeIcons.solidGem,
+                      size: 20.0,
+                    ),
                     title: Text("Held der Steine"),
                     onTap: () {
                       Navigator.push(
@@ -137,7 +128,10 @@ class AppDrawer extends StatelessWidget {
                 ],
               ),
               ListTile(
-                leading: FaIcon(FontAwesomeIcons.asterisk, size: 20.0,),
+                leading: FaIcon(
+                  FontAwesomeIcons.asterisk,
+                  size: 20.0,
+                ),
                 title: Text("Andere Sounds"),
                 onTap: () {
                   Navigator.push(
@@ -210,7 +204,7 @@ class AppDrawer extends StatelessWidget {
               ),
             ),
           ),
-        )
+        ),
       ],
     ));
   }
