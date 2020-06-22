@@ -36,17 +36,14 @@ class _SettingsState extends State<Settings> {
                   ? FaIcon(FontAwesomeIcons.solidSun)
                   : FaIcon(FontAwesomeIcons.solidMoon),
               onPressed: changeBrightness,
+              //iconSize: 20.0,
             ),
           ),
           ListTile(
             title: Text('Version'),
             trailing: Text(
-              '',
+              '1.0.3',
               style: TextStyle(color: Colors.yellow),
-            ),
-            leading: IconButton(
-              icon: Icon(Icons.ac_unit),
-              onPressed: null,
             ),
           ),
         ],

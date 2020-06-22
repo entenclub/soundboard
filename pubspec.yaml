@@ -46,7 +46,7 @@ flutter:
     - assets/sounds/youtuber/knossi/
 
     # App Version
-    - assets/VERSION.txt
+    - assets/res/version.txt
 
 import_sorter:
   emojis: true
