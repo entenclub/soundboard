@@ -178,7 +178,7 @@ class AppDrawer extends StatelessWidget {
                   ),
                   ListTile(
                     leading: Icon(Icons.feedback),
-                    title: Text("Feedback etc."),
+                    title: Text("Feedback, Wünsche, usw."),
                     onTap: () async {
                       final mail =
                           "mailto:asoysal301@gmail.com?subject=Youtuber Soundboard&body=Moin";
