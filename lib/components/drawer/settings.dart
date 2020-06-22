@@ -10,15 +10,33 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Settings extends StatefulWidget {
   @override
-  _SettingsState createState() => _SettingsState();
+  _SettingsState createState() {
+    return new _SettingsState();
+  }
 }
 
 class _SettingsState extends State<Settings> {
+  String _version = "";
+
   void changeBrightness() {
     DynamicTheme.of(context).setBrightness(
         Theme.of(context).brightness == Brightness.dark
             ? Brightness.light
             : Brightness.dark);
+  }
+
+  _SettingsState() {
+    getVersion().then(
+      (val) => setState(
+        () {
+          _version = val;
+        },
+      ),
+    );
+  }
+
+  Future<String> getVersion() async {
+    return await rootBundle.loadString("assets/res/version.txt");
   }
 
   @override
@@ -27,27 +45,22 @@ class _SettingsState extends State<Settings> {
       appBar: AppBar(
         title: Text("Einstellungen"),
       ),
-      body: ListView(
-        children: <Widget>[
-          ListTile(
-            title: Text("Thema"),
-            trailing: IconButton(
-              icon: Theme.of(context).brightness == Brightness.light
-                  ? FaIcon(FontAwesomeIcons.solidSun)
-                  : FaIcon(FontAwesomeIcons.solidMoon),
-              onPressed: changeBrightness,
-              //iconSize: 20.0,
-            ),
+      body: ListView(children: <Widget>[
+        ListTile(
+          title: Text("Thema"),
+          trailing: IconButton(
+            icon: Theme.of(context).brightness == Brightness.light
+                ? FaIcon(FontAwesomeIcons.solidSun)
+                : FaIcon(FontAwesomeIcons.solidMoon),
+            onPressed: changeBrightness,
+            //iconSize: 20.0,
           ),
-          ListTile(
-            title: Text('Version'),
-            trailing: Text(
-              '1.0.3',
-              style: TextStyle(color: Colors.yellow),
-            ),
-          ),
-        ],
-      ),
+        ),
+        ListTile(
+          title: Text('Version'),
+          trailing: Text(_version),
+        ),
+      ]),
     );
   }
 }
