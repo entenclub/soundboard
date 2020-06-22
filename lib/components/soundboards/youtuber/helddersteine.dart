@@ -158,7 +158,7 @@ class Helddersteine extends StatelessWidget {
                         sType: y,
                       ),
                       SoundButton(
-                        text: 'Wollt\"s nicht machen',
+                        text: 'Wollt\'s nicht machen',
                         path: wolltsnichtmachen,
                         type: held,
                         sType: y,
