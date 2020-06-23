@@ -11,7 +11,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class Settings extends StatefulWidget {
   @override
   _SettingsState createState() {
-    return new _SettingsState();
+    return _SettingsState();
   }
 }
 
@@ -45,22 +45,25 @@ class _SettingsState extends State<Settings> {
       appBar: AppBar(
         title: Text("Einstellungen"),
       ),
-      body: ListView(children: <Widget>[
-        ListTile(
-          title: Text("Thema"),
-          trailing: IconButton(
-            icon: Theme.of(context).brightness == Brightness.light
-                ? FaIcon(FontAwesomeIcons.solidSun)
-                : FaIcon(FontAwesomeIcons.solidMoon),
-            onPressed: changeBrightness,
-            //iconSize: 20.0,
+      body: ListView(
+        children: <Widget>[
+          ListTile(
+            title: Text("Thema"),
+            trailing: IconButton(
+              icon: Theme.of(context).brightness == Brightness.light
+                  ? FaIcon(FontAwesomeIcons.solidSun)
+                  : FaIcon(FontAwesomeIcons.solidMoon),
+              onPressed: changeBrightness,
+            ),
           ),
-        ),
-        ListTile(
-          title: Text('Version'),
-          trailing: Text(_version),
-        ),
-      ]),
+          Divider(),
+          ListTile(
+            title: Text('Version'),
+            trailing: Text(_version),
+          ),
+          //Divider(),
+        ],
+      ),
     );
   }
 }

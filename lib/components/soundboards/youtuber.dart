@@ -6,18 +6,6 @@ import 'package:german_meme_soundboard/components/soundboards/soundButton.dart';
 
 class YoutuberSoundboard extends StatelessWidget {
 
-  // knossi
-
-
-  // stanni
-
-
-  // unge
-
-
-  // justin
-
-
   // Names
   final String ste = 'steel';
   final String jus = 'justin';

@@ -8,7 +8,7 @@ import 'dart:convert';
 class SecondScreen extends StatefulWidget {
   @override
   _SecondScreenState createState() {
-    return new _SecondScreenState();
+    return _SecondScreenState();
   }
 }
 

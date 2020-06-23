@@ -31,7 +31,7 @@ class SearchForUpdatesState extends State<SearchForUpdates> {
 
   startTime() async {
     var duration = Duration(seconds: 4);
-    return new Timer(duration, route);
+    return Timer(duration, route);
   }
 
   route() {
