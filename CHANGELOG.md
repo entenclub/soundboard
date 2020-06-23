@@ -6,12 +6,10 @@
 - Entfernen von unnötigen Seiten
 
 # v1.0.2
-
-- Mehr Sounds und Inhalt
+* Mehr Sounds und Inhalt, Sendefunktion
 
 # v1.0.1
-
-- Neuentwicklung der App mit Flutter
+* Neuentwicklung der App mit Flutter 
 
 # v1.0.0
 
