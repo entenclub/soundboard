@@ -19,8 +19,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return DynamicTheme(
       defaultBrightness: Brightness.light,
-      data: (brightness) =>
-          ThemeData(brightness: brightness, primaryColor: Colors.indigo),
+      data: (brightness) => ThemeData(
+          brightness: brightness,
+          primaryColor:
+              brightness == Brightness.dark ? Colors.black : Colors.blue),
       themedWidgetBuilder: (context, theme) {
         return MaterialApp(
           title: 'German Meme Soundboard',
