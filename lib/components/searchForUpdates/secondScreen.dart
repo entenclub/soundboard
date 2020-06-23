@@ -4,6 +4,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:http/http.dart' as http;
 import 'package:flutter/services.dart';
 import 'dart:convert';
+import 'dart:io';
 
 class SecondScreen extends StatefulWidget {
   @override
@@ -15,6 +16,7 @@ class SecondScreen extends StatefulWidget {
 class _SecondScreenState extends State<SecondScreen> {
   String _version = "";
   var _currentVersion = "";
+
   final String apiUrl = "https://soundboard-version.herokuapp.com/api/version";
 
   Future<String> getVersion() async {
@@ -22,9 +24,13 @@ class _SecondScreenState extends State<SecondScreen> {
   }
 
   Future<String> fetchVersion() async {
-    var res = await http.get(apiUrl);
-    print(res);
-    return json.decode(res.body)['v'];
+    try {
+      var res = await http.get(apiUrl);
+      print(res);
+      return json.decode(res.body)['v'];
+    } on SocketException {
+      return "KEINE INTERNETVERBINDUNG.";
+    }
   }
 
   _SecondScreenState() {
