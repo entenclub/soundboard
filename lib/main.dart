@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       data: (brightness) => ThemeData(
           brightness: brightness,
           primaryColor:
-              brightness == Brightness.dark ? Colors.black : Colors.blue),
+              brightness == Brightness.light ? Colors.blue : Colors.black),
       themedWidgetBuilder: (context, theme) {
         return MaterialApp(
           title: 'German Meme Soundboard',
