@@ -5,7 +5,7 @@ Just an Android App using WebView.
 App rebuilt with Flutter SDK.
 
 # Version 1.0.2
-Added more Sounds and About the App Page.
+Added more Sounds and About the App Page. Sending Sounds is now possible.
 
 # Version 1.0.3
 Currently working on this :)
