@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'dart:async' show Future;
+import 'dart:async';
 import 'package:flutter/services.dart' show rootBundle;
-
+import 'package:http/http.dart' as http;
 import 'package:flutter/services.dart';
+import 'dart:convert';
 
 class SecondScreen extends StatefulWidget {
   @override
@@ -13,9 +14,17 @@ class SecondScreen extends StatefulWidget {
 
 class _SecondScreenState extends State<SecondScreen> {
   String _version = "";
+  var _currentVersion = "";
+  final String apiUrl = "https://soundboard-version.herokuapp.com/api/version";
 
   Future<String> getVersion() async {
     return await rootBundle.loadString("assets/res/version.txt");
+  }
+
+  Future<String> fetchVersion() async {
+    var res = await http.get(apiUrl);
+    print(res);
+    return json.decode(res.body)['v'];
   }
 
   _SecondScreenState() {
@@ -26,6 +35,9 @@ class _SecondScreenState extends State<SecondScreen> {
         },
       ),
     );
+    fetchVersion().then((val) => setState(() {
+          _currentVersion = val;
+        }));
   }
 
   @override
@@ -35,7 +47,10 @@ class _SecondScreenState extends State<SecondScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[Text("Deine installierte Version: " + _version)],
+          children: <Widget>[
+            Text("Deine installierte Version: " + _version),
+            Text("Die aktuellste Version: " + _currentVersion)
+          ],
         ),
       ),
     );
