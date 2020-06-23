@@ -1,3 +1,3 @@
 # german meme soundboard
 
-A soundboard written in Dart using Flutter including many German meme sounds.
+A soundboard written in Dart using Flutter SDK including many sharable German meme sounds.
