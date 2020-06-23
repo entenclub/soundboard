@@ -7,7 +7,7 @@ import 'package:flutter/services.dart';
 class SecondScreen extends StatefulWidget {
   @override
   _SecondScreenState createState() {
-    return new _SecondScreenState();
+    return _SecondScreenState();
   }
 }
 

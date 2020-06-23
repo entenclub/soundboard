@@ -11,7 +11,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class Settings extends StatefulWidget {
   @override
   _SettingsState createState() {
-    return new _SettingsState();
+    return _SettingsState();
   }
 }
 
