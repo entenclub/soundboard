@@ -65,6 +65,9 @@ class SoundButton extends StatelessWidget {
       case 'steel':
         c = Colors.blue;
         break;
+      case 'kollegah':
+        c = Colors.blueAccent;
+        break;
       default:
         c = Color.fromRGBO(52, 73, 94, 1);
     }
@@ -75,10 +78,10 @@ class SoundButton extends StatelessWidget {
           padding: EdgeInsets.all(3),
           child: RaisedButton(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5),
+              borderRadius: BorderRadius.circular(2),
             ),
             child: Padding(
-              padding: EdgeInsets.only(top: 20, bottom: 20),
+              padding: EdgeInsets.only(top: 10, bottom: 10),
               child: Text(
                 this.text,
                 textAlign: TextAlign.center,

@@ -51,6 +51,11 @@ flutter:
     - assets/sounds/youtuber/ungespielt/
     - assets/sounds/youtuber/knossi/
 
+    # Musiker
+    - assets/sounds/musiker/kollegah/
+    - assets/sounds/musiker/einsachtsieben/
+    - assets/sounds/musiker/xatar/
+
     # App Version
     - assets/res/version.txt
 
