@@ -1,4 +1,4 @@
-# v1.0.3 (aktuell)
+# v1.0.3 
 
 - Bessere Übersicht bzw. neues Design
 - Mehr Sounds + Kategorien
