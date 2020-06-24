@@ -97,7 +97,19 @@ class _MyHomePageState extends State<MyHomePage> {
                       );
                     },
                   ),
-                  /* WaveWidget(
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// ka
+
+/* WaveWidget(
                 config: CustomConfig(
                   gradients: [
                     [Colors.red, Color(0xEEF44336)],
@@ -131,12 +143,3 @@ class _MyHomePageState extends State<MyHomePage> {
                   double.infinity,
                 ),
               ), */
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}

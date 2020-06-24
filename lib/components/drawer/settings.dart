@@ -58,10 +58,10 @@ class _SettingsState extends State<Settings> {
           ),
           Divider(),
           ListTile(
-            title: Text('Version'),
+            title: Text('Aktuelle Version'),
             trailing: Text(_version),
           ),
-          //Divider(),
+          Divider(),
         ],
       ),
     );
