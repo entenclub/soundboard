@@ -1,12 +1,13 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart'
-    show Scaffold, AppBar, Theme, Colors, MaterialPageRoute;
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'dart:async';
-
-import 'package:flutter_spinkit/flutter_spinkit.dart' show SpinKitCircle;
-import 'package:animated_text_kit/animated_text_kit.dart' show TextLiquidFill;
-
-import 'package:german_meme_soundboard/components/searchForUpdates/secondScreen.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+import 'package:flutter_animation_set/widget/transition_animations.dart';
+import 'package:flutter_animation_set/widget/behavior_animations.dart';
 
 class SearchForUpdates extends StatefulWidget {
   @override
@@ -16,58 +17,117 @@ class SearchForUpdates extends StatefulWidget {
 }
 
 class SearchForUpdatesState extends State<SearchForUpdates> {
+  ScaffoldState scaffold;
+
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
+  void showSnackbar(String text) {
+    _scaffoldKey.currentState.showSnackBar(
+      SnackBar(
+        content: Text(
+          text,
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.blueAccent,
+        duration: Duration(seconds: 10),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(10.0),
+            topRight: Radius.circular(10.0),
+          ),
+        ),
+      ),
+    );
+  }
+
+  bool isLoading;
+  bool internetCon;
+
+  var _version = "";
+  var _currentVersion = "";
+
+  final String apiUrl = "https://soundboard-version.herokuapp.com/api/version";
+
   @override
   void initState() {
+    isLoading = true;
+    internetCon = true;
     super.initState();
-    startTime();
   }
+
+  Future<String> getVersion() async {
+    return await rootBundle.loadString("assets/res/version.txt");
+  }
+
+  Future<String> fetchVersion() async {
+    try {
+      var res = await http.get(apiUrl);
+      return json.decode(res.body)['v'];
+    } on SocketException {
+      internetCon = false;
+      return "";
+    }
+  }
+
+  SearchForUpdatesState() {
+    getVersion().then((value) => setState(() {
+          _version = value;
+        }));
+    fetchVersion().then(
+      (value) => setState(
+        () {
+          _currentVersion = value;
+          isLoading = false;
+
+          String msg;
+
+          if (_version != "" &&
+              _currentVersion != "" &&
+              !_currentVersion.startsWith("KEINE")) {
+            if (_version == _currentVersion) {
+              msg = "Du bist auf dem neusten Stand! 🙂";
+            } else {
+              msg =
+                  "Öffne den Google Play Store und lad die neuste Version herunter! 😡";
+            }
+          } else if (internetCon == false) {
+            msg = "Du hast keine Internetverbindung! 🛰️";
+          }
+
+          showSnackbar(msg);
+        },
+      ),
+    );
+  }
+
+  TextStyle txtStyle = TextStyle(fontSize: 20, fontFamily: "Horizon");
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: initScreen(context),
-    );
-  }
-
-  startTime() async {
-    var duration = Duration(seconds: 4);
-    return Timer(duration, route);
-  }
-
-  route() {
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(
-        builder: (context) => SecondScreen(),
-      ),
-    );
-  }
-
-  initScreen(BuildContext context) {
-    return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
-        title: Text("Moin"),
+        title: Text("Nach Updates suchen"),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          SpinKitCircle(
-            color: Theme.of(context).brightness == Brightness.light
-                ? Colors.black
-                : Colors.white,
-          ),
-          TextLiquidFill(
-            text: 'loading',
-            waveColor: Colors.blueAccent,
-            boxBackgroundColor: Theme.of(context).brightness == Brightness.light
-                ? Color.fromRGBO(250, 250, 250, 1)
-                : Color.fromRGBO(48, 48, 48, 1),
-            loadDuration: Duration(milliseconds: 5000),
-            boxHeight: 100.0,
-            textStyle: TextStyle(fontSize: 40.0),
-          ),
-        ],
+      body: Container(
+        child: isLoading
+            ? Center(
+                child: CircularProgressIndicator(),
+              )
+            : Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Text("Deine installierte Version: " + _version,
+                        style: txtStyle),
+                    Text(
+                      "Die aktuellste Version: " + _currentVersion,
+                      style: txtStyle,
+                    ),
+                  ],
+                ),
+              ),
       ),
     );
   }

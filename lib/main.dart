@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 // 📦 Package imports:
 import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter_whatsnew/flutter_whatsnew.dart';
-import 'package:wave/wave.dart';
-import 'package:wave/config.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
 // 🌎 Project imports:
@@ -51,6 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(title: Text(widget.title)),
       drawer: AppDrawer(),
+<<<<<<< HEAD
       body: ListView(
         children: <Widget>[
           SafeArea(
@@ -143,3 +142,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   double.infinity,
                 ),
               ), */
+=======
+      body: ListView(children: <Widget>[Text("Moin")]),
+    );
+  }
+}
+>>>>>>> ceedd45f4def3c9b30ce58a02b3ed6f6f77c6ca1

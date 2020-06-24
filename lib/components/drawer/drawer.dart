@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:german_meme_soundboard/components/soundboards/musicians/einsachtsieben.dart';
+import 'package:german_meme_soundboard/components/soundboards/musicians/kollegah.dart';
+import 'package:german_meme_soundboard/components/soundboards/musicians/xatar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // 🌎 Project imports:
@@ -13,8 +16,6 @@ import 'package:german_meme_soundboard/components/soundboards/youtuber/knossi.da
 import 'package:german_meme_soundboard/components/soundboards/youtuber/standartskill.dart';
 import 'package:german_meme_soundboard/components/soundboards/youtuber/ungespielt.dart';
 import 'package:german_meme_soundboard/components/soundboards/youtuber/justin.dart';
-import 'package:german_meme_soundboard/components/soundboards/youtuber.dart';
-import 'package:german_meme_soundboard/components/soundboards/musicians.dart';
 import 'package:german_meme_soundboard/components/soundboards/miscellaneous.dart';
 
 class AppDrawer extends StatelessWidget {
@@ -110,9 +111,11 @@ class AppDrawer extends StatelessWidget {
                     title: Text("Held der Steine"),
                     onTap: () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Helddersteine()));
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Helddersteine(),
+                        ),
+                      );
                     },
                   )
                 ],
@@ -122,12 +125,50 @@ class AppDrawer extends StatelessWidget {
                 title: Text("Musiker Sounds"),
                 children: <Widget>[
                   ListTile(
-                    leading: Icon(Icons.music_note),
+                    leading: Icon(Icons.group),
                     title: Text("187 Strassenbande"),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Einsachtsieben(),
+                        ),
+                      );
+                    },
                   ),
+                  ListTile(
+                    leading: FaIcon(
+                      FontAwesomeIcons.userSecret,
+                      size: 20,
+                    ),
+                    title: Text("Kollegah"),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Kollegah(),
+                        ),
+                      );
+                    },
+                  ),
+                  ListTile(
+                    leading: FaIcon(
+                      FontAwesomeIcons.cat,
+                      size: 20,
+                    ),
+                    title: Text("Xatar"),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Xatar(),
+                        ),
+                      );
+                    },
+                  )
                 ],
               ),
-              ListTile(
+              /* ListTile(
                 leading: FaIcon(
                   FontAwesomeIcons.asterisk,
                   size: 20.0,
@@ -141,7 +182,7 @@ class AppDrawer extends StatelessWidget {
                     ),
                   );
                 },
-              ),
+              ), */
             ],
           ),
         ),

@@ -7,6 +7,11 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_whatsnew/flutter_whatsnew.dart';
+import 'package:flutter_awesome_buttons/flutter_awesome_buttons.dart';
+
+import 'package:german_meme_soundboard/components/drawer/drawer.dart';
+import 'package:german_meme_soundboard/components/searchForUpdates/searchForUpdates.dart';
 
 class Settings extends StatefulWidget {
   @override
@@ -17,6 +22,8 @@ class Settings extends StatefulWidget {
 
 class _SettingsState extends State<Settings> {
   String _version = "";
+
+  final double textScaleFactor = 1.0;
 
   void changeBrightness() {
     DynamicTheme.of(context).setBrightness(
@@ -61,7 +68,53 @@ class _SettingsState extends State<Settings> {
             title: Text('Aktuelle Version'),
             trailing: Text(_version),
           ),
-          Divider(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              GredientButton(
+                colors: [Colors.purple, Colors.deepPurple],
+                title: "Versionsübersicht",
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => WhatsNewPage.changelog(
+                        title: Text(
+                          "Versionsübersicht",
+                          textScaleFactor: textScaleFactor,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                            fontSize: 22.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        buttonText: Text(
+                          'Schließen',
+                          textScaleFactor: textScaleFactor,
+                          style: const TextStyle(color: Colors.white),
+                        ),
+                      ),
+                      fullscreenDialog: true,
+                    ),
+                  );
+                },
+              ),
+              GredientButton(
+                colors: [Colors.lightBlueAccent, Colors.blue],
+                title: "Nach Updates suchen",
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SearchForUpdates(),
+                    ),
+                  );
+                },
+              ),
+            ],
+          )
+
+          //Divider(),
         ],
       ),
     );
