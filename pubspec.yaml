@@ -24,6 +24,9 @@ dependencies:
   http:
   flutter_animation_set: ^0.0.4
   flutter_awesome_buttons: ^0.1.0
+  drawing_animation: ^0.1.3
+  animated_text_kit: ^2.1.0
+
 
 dev_dependencies:
   flutter_launcher_icons: '^0.7.3'
@@ -61,6 +64,7 @@ flutter:
 
     # ChangeLog
     - CHANGELOG.md
+
 
 import_sorter:
   emojis: true

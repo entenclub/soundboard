@@ -1,10 +1,11 @@
 // 🐦 Flutter imports:
+import 'package:drawing_animation/drawing_animation.dart';
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:dynamic_theme/dynamic_theme.dart';
-import 'package:flutter_whatsnew/flutter_whatsnew.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 // 🌎 Project imports:
 import 'package:german_meme_soundboard/components/drawer/drawer.dart';
@@ -23,9 +24,9 @@ class MyApp extends StatelessWidget {
               brightness == Brightness.light ? Colors.blue : Colors.black),
       themedWidgetBuilder: (context, theme) {
         return MaterialApp(
-          title: 'German Meme Soundboard',
+          title: 'Deutsches Meme Soundboard',
           theme: theme,
-          home: MyHomePage(title: 'German Meme Soundboard'),
+          home: MyHomePage(title: 'Deutsches Meme Soundboard'),
         );
       },
     );
@@ -49,7 +50,32 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(title: Text(widget.title)),
       drawer: AppDrawer(),
-      body: ListView(children: <Widget>[Text("Moin")]),
+      body: ListView(
+        children: <Widget>[
+          SizedBox(
+            width: 250.0,
+            child: TypewriterAnimatedTextKit(
+                onTap: () {
+                  print("Tap Event");
+                },
+                text: [
+                  "Discipline is the best tool",
+                  "Design first, then code",
+                  "Do not patch bugs out, rewrite them",
+                  "Do not test bugs out, design them out",
+                ],
+                textStyle: TextStyle(fontSize: 30.0, fontFamily: "Agne"),
+                textAlign: TextAlign.start,
+                alignment: AlignmentDirectional.topStart // or Alignment.topLeft
+                ),
+          ),
+          AnimatedDrawing.svg(
+            "assets/images/test.svg",
+            run: true,
+            duration: Duration(seconds: 10),
+          ),
+        ],
+      ),
     );
   }
 }

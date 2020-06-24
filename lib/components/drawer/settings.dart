@@ -10,7 +10,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_whatsnew/flutter_whatsnew.dart';
 import 'package:flutter_awesome_buttons/flutter_awesome_buttons.dart';
 
-import 'package:german_meme_soundboard/components/drawer/drawer.dart';
 import 'package:german_meme_soundboard/components/searchForUpdates/searchForUpdates.dart';
 
 class Settings extends StatefulWidget {
