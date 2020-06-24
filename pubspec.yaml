@@ -18,13 +18,12 @@ dependencies:
   link: ^1.0.0
   esys_flutter_share: ^1.0.0
   flutter_whatsnew:
-  wave: ^0.0.8
   flutter_staggered_animations: ^0.1.2
   flutter_markdown: ^0.2.0
   path_provider: ^1.6.11
-  flutter_spinkit: ^4.1.2
-  animated_text_kit: ^2.2.0
   http:
+  flutter_animation_set: ^0.0.4
+  flutter_awesome_buttons: ^0.1.0
 
 dev_dependencies:
   flutter_launcher_icons: '^0.7.3'
