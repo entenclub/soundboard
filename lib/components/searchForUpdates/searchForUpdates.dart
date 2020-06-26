@@ -1,11 +1,15 @@
+// 🎯 Dart imports:
 import 'dart:io';
+import 'dart:async';
+import 'dart:convert';
 
+// 🐦 Flutter imports:
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'dart:async';
+
+// 📦 Package imports:
 import 'package:http/http.dart' as http;
-import 'dart:convert';
 import 'package:flutter_animation_set/widget/transition_animations.dart';
 import 'package:flutter_animation_set/widget/behavior_animations.dart';
 

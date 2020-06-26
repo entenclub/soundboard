@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:german_meme_soundboard/components/soundboards/musicians/einsachtsieben.dart';
-import 'package:german_meme_soundboard/components/soundboards/musicians/kollegah.dart';
-import 'package:german_meme_soundboard/components/soundboards/musicians/xatar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // 🌎 Project imports:
+import 'package:german_meme_soundboard/components/soundboards/musicians/einsachtsieben.dart';
+import 'package:german_meme_soundboard/components/soundboards/musicians/kollegah.dart';
+import 'package:german_meme_soundboard/components/soundboards/musicians/xatar.dart';
 import 'package:german_meme_soundboard/components/drawer/settings.dart';
 import 'package:german_meme_soundboard/components/soundboards/youtuber/helddersteine.dart';
 import 'package:german_meme_soundboard/components/soundboards/youtuber/montananblack.dart';

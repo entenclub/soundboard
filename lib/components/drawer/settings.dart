@@ -1,15 +1,18 @@
+// 🎯 Dart imports:
+import 'dart:async' show Future;
+
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'dart:async' show Future;
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:flutter/services.dart';
 
 // 📦 Package imports:
 import 'package:dynamic_theme/dynamic_theme.dart';
-import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_whatsnew/flutter_whatsnew.dart';
 import 'package:flutter_awesome_buttons/flutter_awesome_buttons.dart';
 
+// 🌎 Project imports:
 import 'package:german_meme_soundboard/components/searchForUpdates/searchForUpdates.dart';
 
 class Settings extends StatefulWidget {
