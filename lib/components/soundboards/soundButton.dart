@@ -68,6 +68,9 @@ class SoundButton extends StatelessWidget {
       case 'kollegah':
         c = Colors.blueAccent;
         break;
+      case 'shindy':
+        c = Colors.indigoAccent;
+        break;
       default:
         c = Color.fromRGBO(52, 73, 94, 1);
     }

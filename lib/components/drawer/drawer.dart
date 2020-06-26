@@ -17,6 +17,7 @@ import 'package:german_meme_soundboard/components/soundboards/youtuber/standarts
 import 'package:german_meme_soundboard/components/soundboards/youtuber/ungespielt.dart';
 import 'package:german_meme_soundboard/components/soundboards/youtuber/justin.dart';
 import 'package:german_meme_soundboard/components/soundboards/miscellaneous.dart';
+import 'package:german_meme_soundboard/components/soundboards/musicians/shindy.dart';
 
 class AppDrawer extends StatelessWidget {
   @override
@@ -162,6 +163,21 @@ class AppDrawer extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) => Xatar(),
+                        ),
+                      );
+                    },
+                  ),
+                  ListTile(
+                    leading: FaIcon(
+                      FontAwesomeIcons.car,
+                      size: 20,
+                    ),
+                    title: Text("Shindy"),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Shindy(),
                         ),
                       );
                     },

@@ -1,7 +1,7 @@
 # v1.0.3 
 
 - Bessere Übersicht bzw. neues Design
-- Mehr Sounds + Kategorien
+- Mehr Sounds, Kategorien und Features
 - Einstellung eines Themas
 - Entfernen von unnötigen Seiten
 

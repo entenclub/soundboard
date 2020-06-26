@@ -52,17 +52,19 @@ class _MyHomePageState extends State<MyHomePage> {
       drawer: AppDrawer(),
       body: ListView(
         children: <Widget>[
-          SizedBox(
+          Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: SizedBox(
             child: TypewriterAnimatedTextKit(
                 text: [
                   "Öffne das Menü",
                   "Öffne das Menü, um loszulegen",
                 ],
                 textStyle: TextStyle(fontSize: 30.0, fontFamily: "Agne"),
-                textAlign: TextAlign.start,
+                textAlign: TextAlign.center,
                 alignment: AlignmentDirectional.topStart // or Alignment.topLeft
                 ),
-          ),
+          ),),
           AnimatedDrawing.svg(
             "assets/images/test.svg",
             run: true,
