@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:german_meme_soundboard/components/soundboards/soundButton.dart';
 
 class Kollegah extends StatelessWidget {
-  final String zweipersoenlichkeiten = "2persönlichkeit.mp3";
+  final String zweipersoenlichkeiten = "zweipersoenlichkeit.mp3";
   final String dafuersteheich = "dafuersteheich.mp3";
   final String dasistalpha = "dasistalpha.mp3";
   final String witz1 = "pencelweniger.mp3";

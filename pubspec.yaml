@@ -1,7 +1,7 @@
 name: german_meme_soundboard
 description: A drippy soundboard.
 
-version: 1.0.0+1
+version: 1.0.3
 
 environment:
   sdk: '>=2.2.0 <3.0.0'

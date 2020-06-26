@@ -1,4 +1,4 @@
-package com.example.german_meme_soundboard
+package x.montanablaksoundboard
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
