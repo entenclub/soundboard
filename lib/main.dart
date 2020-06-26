@@ -53,16 +53,10 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView(
         children: <Widget>[
           SizedBox(
-            width: 250.0,
             child: TypewriterAnimatedTextKit(
-                onTap: () {
-                  print("Tap Event");
-                },
                 text: [
-                  "Discipline is the best tool",
-                  "Design first, then code",
-                  "Do not patch bugs out, rewrite them",
-                  "Do not test bugs out, design them out",
+                  "Öffne das Menü",
+                  "Öffne das Menü, um loszulegen",
                 ],
                 textStyle: TextStyle(fontSize: 30.0, fontFamily: "Agne"),
                 textAlign: TextAlign.start,

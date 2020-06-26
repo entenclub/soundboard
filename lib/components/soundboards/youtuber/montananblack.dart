@@ -59,6 +59,10 @@ class Montanablack extends StatelessWidget {
   final String realtalk = 'realtalk.mp3';
   final String kommtAuchMalWasAnderes =
       "kommtAuchMalWasAnderesAusserFortnite.mp3";
+  final String fresh = "ffffresh.mp3";
+  final String zehnJahre = "renekusshand.mp3";
+  final String soschwarz = "soschwarz.mp3";
+  final String soeinfeini = "soeinfeini.mp3";
 
   final String mon = 'montanablack';
   final String y = "youtuber";
@@ -370,6 +374,31 @@ class Montanablack extends StatelessWidget {
                           sType: y)
                     ],
                   ),
+                  Row(
+                    children: <Widget>[
+                      SoundButton(
+                        text: 'Fresh',
+                        path: fresh,
+                        type: mon,
+                        sType: y,
+                      ),
+                      SoundButton(
+                        text: '10 Jahre',
+                        path: zehnJahre,
+                        type: mon,
+                        sType: y,
+                      ),
+                      SoundButton(
+                        text: 'So schwarz',
+                        path: soschwarz,
+                        type: mon,
+                        sType: y,
+                      ),
+                    ],
+                  ),
+                  Row(children: <Widget>[
+                    SoundButton(text: 'So ein Feini', path: soeinfeini, type: mon, sType: y,)
+                  ],)
                 ],
               ),
             ),
