@@ -101,7 +101,7 @@ class Einsachtsieben extends StatelessWidget {
                       ),
                       SoundButton(
                         text: 'Hamsterkäufe',
-                        path: giraffenweisheit,
+                        path: hamsterkauefe,
                         type: einsa,
                         sType: m,
                       ),
