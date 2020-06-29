@@ -31,7 +31,6 @@ class Montanablack extends StatelessWidget {
   final String bigGGnot = 'bigggnot.mp3';
   final String fish = 'fish.mp3';
   final String ikue = 'ikissureyes.mp3';
-  final String kanacke = 'kanacke.mp3';
   final String cheese = 'cheese.mp3';
   final String uknowhim = 'uknowhim.mp3';
   final String mehmet = 'mehmet.mp3';
@@ -210,7 +209,11 @@ class Montanablack extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       SoundButton(
-                          text: 'Kanacke', path: kanacke, type: mon, sType: y),
+                        text: 'So ein Feini',
+                        path: soeinfeini,
+                        type: mon,
+                        sType: y,
+                      ),
                       SoundButton(
                           text: 'Käsebrötchen',
                           path: cheese,
@@ -396,9 +399,6 @@ class Montanablack extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Row(children: <Widget>[
-                    SoundButton(text: 'So ein Feini', path: soeinfeini, type: mon, sType: y,)
-                  ],)
                 ],
               ),
             ),
