@@ -225,7 +225,7 @@ class AppDrawer extends StatelessWidget {
                     title: Text("App bewerten"),
                     onTap: () async {
                       final appUrl =
-                          "https://play.google.com/store/apps/details?id=x.montanablaksoundboard";
+                          "https://play.google.com/store/apps/details?id=club.ente.soundboard";
                       if (await canLaunch(appUrl)) {
                         await launch(appUrl);
                       } else {

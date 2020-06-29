@@ -33,6 +33,7 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     compileSdkVersion 29
+    ndkVersion "21.3.6528147"
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -43,11 +44,11 @@ android {
     }
 
     defaultConfig {
-        applicationId "x.montanablaksoundboard"
+        applicationId "club.ente.soundboard"
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 8
-        versionName "8.4"
+        versionCode 1
+        versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
