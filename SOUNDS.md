@@ -1,3 +1,0 @@
-# Sounds die noch in die App implementiert werden müssen
-
-...
